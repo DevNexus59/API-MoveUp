@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const { OAuth2Client } = require('google-auth-library');
-const exercices = require('./exercices.json');
 
 const exercices = require('./exercices.json');
 const app = express();
@@ -190,11 +189,7 @@ app.post('/connexion', async (req, res) => {
 
 // ✅ route transmission d'information d'exercices.json
 app.get('/api/exercices', async (req, res) => {
-<<<<<<< HEAD
-  res.json({results: [exercices] });
-=======
   res.json({results: exercices });
->>>>>>> main
 });
 
 // ✅ Route Google Callback
