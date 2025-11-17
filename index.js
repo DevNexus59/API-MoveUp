@@ -252,7 +252,7 @@ app.patch('/api/:userId/favorites', async (req, res) => {
     let users = JSON.parse(data)
     let userFound = false;
     const updatedUsers = users.map(user => {
-      if (user.id === userId) {
+      if (user.id === Number(userId)) {
         userFound = true;
           if (!user.favoriteExercices) {
             user.favoriteExercices = [];
@@ -273,7 +273,7 @@ app.patch('/api/:userId/favorites', async (req, res) => {
 
     await fs.writeFile('users.json', JSON.stringify(updatedUsers, null,2), 'utf-8');
 
-    const userToReturn = updatedUsers.find((user) => user.id === userId)
+    const userToReturn = updatedUsers.find((user) => user.id === Number(userId))
 
     if (userToReturn) {
     res.status(200).send(userToReturn);
