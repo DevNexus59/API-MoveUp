@@ -1,13 +1,25 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const multer = require('multer');
 const fs = require('fs').promises; // Utilisation de la version Promise de fs
 const path = require('path');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const { OAuth2Client } = require('google-auth-library');
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/'); // <- Votre dossier
+  },
 
+  filename: function (req, file, cb) {
+    const nameWithoutExt = path.basename(file.originalname, path.extname(file.originalname));
+    const extension = path.extname(file.originalname);
+    const timestampphoto = Date.now()
+    const finalName = `${nameWithoutExt}-${timestampphoto}${extension}`
+    cb(null, finalName);
+  }});
 const exercices = require('./exercices.json');
 const app = express();
 const PORT = 4000;
@@ -113,9 +125,12 @@ app.post('/subscription', async (req, res) => {
 });
 
 // ✅ Route de mise à jour
-app.patch('/api/users/:id', async (req, res) => {
+app.patch('/api/users/:id', upload.single('photo'), async (req, res) => {
   const idChanged = Number(req.params.id);
   const newData = req.body;
+  if (req.file) { 
+    newData.photoUrl = req.file.path;
+  }
 
   try {
     let users = await readUsers();
@@ -129,7 +144,7 @@ app.patch('/api/users/:id', async (req, res) => {
     users[userIndex] = { ...users[userIndex], ...newData };
 
     await writeUsers(users);
-    res.status(200).send('Modification effectuée avec succès !');
+    res.status(200).json(users[userIndex]);
 
   } catch (error) {
     console.error(error);
@@ -287,7 +302,23 @@ app.patch('/api/:userId/favorites', async (req, res) => {
       res.status(500).send({ message: "Erreur du serveur." });
   }
 });
+// 📍 NOUVELLE ROUTE : Reviews
+app.post('/api/reviews'), async (req,res) => {
+  const { userId, rating, comment } = req.body;
+  newId = new Date.prototype.getMilliseconds()
+  newCreatedAt = new Date().toISOString()
 
+  const newReview = {
+    id: newId,
+    userId: userId,
+    rating: rating,
+    comment: comment,
+    createdAt: newCreatedAt
+  };
+  
+    res.status(201).json(newReview);
+};
+  
 
 // ✅ Lancement du serveur
 app.listen(PORT, () => {
