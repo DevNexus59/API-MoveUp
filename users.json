@@ -14,7 +14,11 @@
     "diet": "Pescétarisme",
     "levelexperiency": "Debutant",
     "timerequired": "01:00",
-    "subscription": "Pro"
+    "subscription": "Pro",
+    "favoriteExercices": [
+      1,
+      "trmte8s"
+    ]
   },
   {
     "id": 2,
