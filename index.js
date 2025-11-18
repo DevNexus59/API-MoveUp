@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const { OAuth2Client } = require('google-auth-library');
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'public/images/'); // <- Votre dossier
+    cb(null, 'public/images/');
   },
 
   filename: function (req, file, cb) {
@@ -20,6 +20,7 @@ const storage = multer.diskStorage({
     const finalName = `${nameWithoutExt}-${timestampphoto}${extension}`
     cb(null, finalName);
   }});
+const upload = multer({ storage: storage });
 const exercices = require('./exercices.json');
 const app = express();
 const PORT = 4000;
@@ -307,12 +308,13 @@ app.post('/api/reviews', async (req, res) => {
   
   try {
 
-    const { userId, rating, comment } = req.body;
+    const { userId, rating, comment, title } = req.body;
     const newId = Date.now(); 
     const newCreatedAt = new Date().toISOString();
     const newReview = {
       id: newId,
       userId: userId,
+      title: title,
       rating: rating,
       comment: comment,
       createdAt: newCreatedAt
