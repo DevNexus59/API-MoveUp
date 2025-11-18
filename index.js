@@ -302,24 +302,45 @@ app.patch('/api/:userId/favorites', async (req, res) => {
       res.status(500).send({ message: "Erreur du serveur." });
   }
 });
-// 📍 NOUVELLE ROUTE : Reviews
-app.post('/api/reviews'), async (req,res) => {
-  const { userId, rating, comment } = req.body;
-  newId = new Date.prototype.getMilliseconds()
-  newCreatedAt = new Date().toISOString()
-
-  const newReview = {
-    id: newId,
-    userId: userId,
-    rating: rating,
-    comment: comment,
-    createdAt: newCreatedAt
-  };
+// 📍 NOUVELLE ROUTE : post Reviews
+app.post('/api/reviews', async (req, res) => {
   
+  try {
+
+    const { userId, rating, comment } = req.body;
+    const newId = Date.now(); 
+    const newCreatedAt = new Date().toISOString();
+    const newReview = {
+      id: newId,
+      userId: userId,
+      rating: rating,
+      comment: comment,
+      createdAt: newCreatedAt
+    }
+    const allReviews = await readReviews();
+    allReviews.push(newReview);
+    await fs.writeFile('reviews.json', JSON.stringify(allReviews, null, 2), 'utf-8');
     res.status(201).json(newReview);
-};
-  
 
+  } catch (error) {
+    console.error("Erreur lors de la sauvegarde de l'avis:", error);
+    res.status(500).send("Erreur serveur");
+  }
+});
+// 📍 NOUVELLE ROUTE :  lire Reviews 
+app.get('/api/reviews', async (req, res) => {
+  
+  try {
+
+    const data = await fs.readFile('reviews.json', 'utf-8');
+    const reviews = JSON.parse(data);
+    res.json(reviews);
+
+  } catch (error) {
+    console.error("Erreur lors de la sauvegarde de l'avis:", error);
+    res.status(500).send("Erreur serveur");
+  }
+});
 // ✅ Lancement du serveur
 app.listen(PORT, () => {
   console.log(`🤖 Serveur API lancé sur http://localhost:${PORT}`);
