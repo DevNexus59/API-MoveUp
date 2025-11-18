@@ -103,12 +103,9 @@ app.get('/api/users/:id', async (req, res) => {
       return res.status(404).send('Utilisateur non trouvé.');
     }
 
-    // 🔒 Note de sécurité :
-    // On ne renvoie jamais le mot de passe hashé au client !
-    // On crée un nouvel objet sans le mot de passe.
     const { password, ...userData } = user;
 
-    res.status(200).json(userData); // On envoie les données de l'utilisateur
+    res.status(200).json(userData);
 
   } catch (error) {
     console.error(error);
@@ -183,6 +180,8 @@ app.patch('/api/users/:id', upload.single('photo'), async (req, res) => {
     users[userIndex] = { ...users[userIndex], ...newData, id: users[userIndex].id };
 
     await writeUsers(users);
+    const updatedUser = users[userIndex];
+    updatedUser.id = Number(updatedUser.id);
     res.status(200).json(users[userIndex]);
 
   } catch (error) {
