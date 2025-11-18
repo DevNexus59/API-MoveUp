@@ -33,11 +33,29 @@ const client = new OAuth2Client(CLIENT_ID);
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Fonction utilitaire pour lire les utilisateurs
 const readUsers = async () => {
   try {
     const data = await fs.readFile(filePath, 'utf8');
+    const users = JSON.parse(data || '[]');
+    return users.map(user => ({
+        ...user,
+        id: Number(user.id)
+    }));
+  } catch (error) {
+    // Si le fichier n'existe pas, on retourne un tableau vide
+    if (error.code === 'ENOENT') {
+      return [];
+    }
+    // Pour les autres erreurs, on les propage
+    throw error;
+  }
+};
+const readReviews = async () => {
+  try {
+    const data = await fs.readFile('reviews.json', 'utf8');
     return JSON.parse(data || '[]');
   } catch (error) {
     // Si le fichier n'existe pas, on retourne un tableau vide
@@ -54,6 +72,24 @@ const writeUsers = async (users) => {
   await fs.writeFile(filePath, JSON.stringify(users, null, 2));
 };
 
+
+app.get('/api/users', async (req, res) => {
+  try {
+    const users = await readUsers();
+    
+ 
+    const usersWithoutPasswords = users.map(user => {
+
+      const { password, ...userData } = user;
+      return userData;
+    });
+    
+    res.status(200).json(usersWithoutPasswords);
+  } catch (error) {
+    console.error("Erreur lors de la récupération de la liste d'utilisateurs:", error);
+    return res.status(500).send('Erreur serveur.');
+  }
+});
 
 // 📍 NOUVELLE ROUTE : Récupérer un utilisateur par son ID
 app.get('/api/users/:id', async (req, res) => {
@@ -128,12 +164,15 @@ app.post('/subscription', async (req, res) => {
 // ✅ Route de mise à jour
 app.patch('/api/users/:id', upload.single('photo'), async (req, res) => {
   const idChanged = Number(req.params.id);
-  const newData = req.body;
-  if (req.file) { 
-    newData.photoUrl = req.file.path;
-  }
+  const newData = req.body; 
+  
+ if (req.file) { 
+    const webPath = req.file.path.replace(/\\/g, '/').replace('public/', '/');
+    newData.photoUrl = webPath; 
+}
 
   try {
+
     let users = await readUsers();
     const userIndex = users.findIndex(u => u.id === idChanged);
 
@@ -141,14 +180,13 @@ app.patch('/api/users/:id', upload.single('photo'), async (req, res) => {
       return res.status(404).send('Utilisateur non trouvé.');
     }
 
-    // Fusionne l'ancien utilisateur avec les nouvelles données
-    users[userIndex] = { ...users[userIndex], ...newData };
+    users[userIndex] = { ...users[userIndex], ...newData, id: users[userIndex].id };
 
     await writeUsers(users);
     res.status(200).json(users[userIndex]);
 
   } catch (error) {
-    console.error(error);
+    console.error("Erreur dans le PATCH /api/users:", error); // 🚩 Vérifiez ce log !
     return res.status(500).send('Erreur serveur lors de la mise à jour.');
   }
 });
@@ -334,9 +372,8 @@ app.get('/api/reviews', async (req, res) => {
   
   try {
 
-    const data = await fs.readFile('reviews.json', 'utf-8');
-    const reviews = JSON.parse(data);
-    res.json(reviews);
+    const reviews = await readReviews(); 
+    res.json(reviews);
 
   } catch (error) {
     console.error("Erreur lors de la sauvegarde de l'avis:", error);
