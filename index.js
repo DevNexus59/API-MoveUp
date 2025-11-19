@@ -1,13 +1,27 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const multer = require('multer');
+const moment = require('moment');
 const fs = require('fs').promises; // Utilisation de la version Promise de fs
 const path = require('path');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const { OAuth2Client } = require('google-auth-library');
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/');
+  },
 
+  filename: function (req, file, cb) {
+    const nameWithoutExt = path.basename(file.originalname, path.extname(file.originalname));
+    const extension = path.extname(file.originalname);
+    const timestampphoto = Date.now()
+    const finalName = `${nameWithoutExt}-${timestampphoto}${extension}`
+    cb(null, finalName);
+  }});
+const upload = multer({ storage: storage });
 const exercices = require('./exercices.json');
 const app = express();
 const PORT = 4000;
@@ -20,11 +34,29 @@ const client = new OAuth2Client(CLIENT_ID);
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Fonction utilitaire pour lire les utilisateurs
 const readUsers = async () => {
   try {
     const data = await fs.readFile(filePath, 'utf8');
+    const users = JSON.parse(data || '[]');
+    return users.map(user => ({
+        ...user,
+        id: Number(user.id)
+    }));
+  } catch (error) {
+    // Si le fichier n'existe pas, on retourne un tableau vide
+    if (error.code === 'ENOENT') {
+      return [];
+    }
+    // Pour les autres erreurs, on les propage
+    throw error;
+  }
+};
+const readReviews = async () => {
+  try {
+    const data = await fs.readFile('reviews.json', 'utf8');
     return JSON.parse(data || '[]');
   } catch (error) {
     // Si le fichier n'existe pas, on retourne un tableau vide
@@ -42,6 +74,133 @@ const writeUsers = async (users) => {
 };
 
 
+app.get('/api/users', async (req, res) => {
+  try {
+    const users = await readUsers();
+    
+ 
+    const usersWithoutPasswords = users.map(user => {
+
+      const { password, ...userData } = user;
+      return userData;
+    });
+    
+    res.status(200).json(usersWithoutPasswords);
+  } catch (error) {
+    console.error("Erreur lors de la récupération de la liste d'utilisateurs:", error);
+    return res.status(500).send('Erreur serveur.');
+  }
+});
+
+// 🎖️Fonction utilitaire pour les badges🎖️
+const readBadges = async () => {
+  try {
+    const data = await fs.readFile('badges.json', 'utf8');
+    return JSON.parse(data || '[]');
+  } catch (error) {
+    if (error.code === 'ENOENT') return []; // Si pas de fichier, tableau vide
+    throw error;
+  }
+};
+
+// Simulation de données utilisateurs
+
+const userProgress ={
+    'user_111': {
+        totalExercisesCompleted: 0,
+        totalEarlyWorkouts: 0,
+        totalLateWorkouts: 0,
+        consecutiveDays: 0, /* Nécessitera la création d'une archive des dates de connection */ 
+        lastWorkoutDate: null,
+        exercisesTried: {}, /* Nécessitera l'ajout d'un trigger */
+        exercisesCounts: {}, /* Nécessitera l'ajout d'un trigger */
+        unlockedBadges: []
+},
+};
+
+// Vérification des Achievements
+
+function checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList) {
+    const now = moment();
+    const hour = now.hour();
+    readUsers();
+    
+
+// Vérification de Régularité
+    if (user.lastWorkoutDate) {
+        const lastDate = moment(user.lastWorkoutDate).startOf('day');
+        const diffDays = now.startOf('day').diff(lastDate, 'days');
+
+        if (diffDays === 1) {
+            user.consecutiveDays += 1;
+        } else if (diffDays > 1) {
+            user.consecutiveDays = 1;
+        }
+    } else {
+        user.consecutiveDays = 1;
+    }
+    user.lastWorkoutDate = now.toISOString();
+
+    // Vérification Horaire
+    if (hour < 7) user.totalEarlyWorkouts += 1;
+    if (hour >= 22) user.totalLateWorkouts += 1;
+
+    // Vérification Diversité
+    user.exercisesTried[exerciseData.exerciseId] = true;
+    user.exercisesCounts[exerciseData.exerciseId] = (user.exercisesCounts[exerciseData.exerciseId] || 0) + 1;
+
+    // Mise a jour pour les badges type LOGIC
+    user.exercisesTriedCount = Object.keys(user.exercisesTried).length;
+    user.maxExerciseCount = Math.max(0, ...Object.values(user.exercisesCounts));
+
+    const logicBadges = badgesList.filter(b => b.type === 'LOGIC');
+
+    logicBadges.forEach(badge => {
+        const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
+        let conditionMet = false;
+
+        if (badge.metric === 'exercisesTriedCount' || badge.metric === 'maxExerciseCount') {
+            conditionMet = user[badge.metric] >= badge.requiredValue;
+        } else if (user[badge.metric] !== undefined) {
+            conditionMet = user[badge.metric] >= badge.requiredValue;
+        }
+
+        if (conditionMet && !isAlreadyUnlocked) {
+            user.unlockedBadges.push(badge.id);
+            newlyUnlocked.push(badge);
+        }
+    });
+}
+
+// Controle la réalisation d'un exo, les metrics et les achievements.
+function checkAndUnlockBadges(user, exerciseData, badgesList) {
+    const newlyUnlocked = [];
+    user.totalExercisesCompleted = (user.totalExercisesCompleted || 0) +1;
+    user = userProgress[user];
+    if (!user) {
+        user = userProgress[user] = {
+            totalExercisesCompleted: 0, totalEarlyWorkouts: 0, totalLateWorkouts: 0,
+            consecutiveDays: 0, lastWorkoutDate: null, exercisesTried: {}, exercisesCounts: {},
+            unlockedBadges: []
+        };
+    }
+
+    //Contrôle du cumul pour badges de Progression
+    badgesList.filter(b => b.type !== 'LOGIC').forEach(badge =>{
+        const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
+        const conditionMet = user[badge.metric] >= badge.requiredValue;
+
+        if (conditionMet && !isAlreadyUnlocked) {
+            user.unlockedBadges.push(badge.id);
+            newlyUnlocked.push(badge);
+        }
+    });
+    //Contrôle des badges de type temporel et de diversité
+    checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList);
+
+    return newlyUnlocked;
+}
+
 // 📍 NOUVELLE ROUTE : Récupérer un utilisateur par son ID
 app.get('/api/users/:id', async (req, res) => {
   const idToFind = Number(req.params.id);
@@ -54,12 +213,9 @@ app.get('/api/users/:id', async (req, res) => {
       return res.status(404).send('Utilisateur non trouvé.');
     }
 
-    // 🔒 Note de sécurité :
-    // On ne renvoie jamais le mot de passe hashé au client !
-    // On crée un nouvel objet sans le mot de passe.
     const { password, ...userData } = user;
 
-    res.status(200).json(userData); // On envoie les données de l'utilisateur
+    res.status(200).json(userData);
 
   } catch (error) {
     console.error(error);
@@ -113,11 +269,17 @@ app.post('/subscription', async (req, res) => {
 });
 
 // ✅ Route de mise à jour
-app.patch('/api/users/:id', async (req, res) => {
+app.patch('/api/users/:id', upload.single('photo'), async (req, res) => {
   const idChanged = Number(req.params.id);
-  const newData = req.body;
+  const newData = req.body; 
+  
+ if (req.file) { 
+    const webPath = req.file.path.replace(/\\/g, '/').replace('public/', '/');
+    newData.photoUrl = webPath; 
+}
 
   try {
+
     let users = await readUsers();
     const userIndex = users.findIndex(u => u.id === idChanged);
 
@@ -125,14 +287,15 @@ app.patch('/api/users/:id', async (req, res) => {
       return res.status(404).send('Utilisateur non trouvé.');
     }
 
-    // Fusionne l'ancien utilisateur avec les nouvelles données
-    users[userIndex] = { ...users[userIndex], ...newData };
+    users[userIndex] = { ...users[userIndex], ...newData, id: users[userIndex].id };
 
     await writeUsers(users);
-    res.status(200).send('Modification effectuée avec succès !');
+    const updatedUser = users[userIndex];
+    updatedUser.id = Number(updatedUser.id);
+    res.status(200).json(users[userIndex]);
 
   } catch (error) {
-    console.error(error);
+    console.error("Erreur dans le PATCH /api/users:", error); // 🚩 Vérifiez ce log !
     return res.status(500).send('Erreur serveur lors de la mise à jour.');
   }
 });
@@ -252,7 +415,7 @@ app.patch('/api/:userId/favorites', async (req, res) => {
     let users = JSON.parse(data)
     let userFound = false;
     const updatedUsers = users.map(user => {
-      if (user.id === userId) {
+      if (user.id === Number(userId)) {
         userFound = true;
           if (!user.favoriteExercices) {
             user.favoriteExercices = [];
@@ -273,7 +436,7 @@ app.patch('/api/:userId/favorites', async (req, res) => {
 
     await fs.writeFile('users.json', JSON.stringify(updatedUsers, null,2), 'utf-8');
 
-    const userToReturn = updatedUsers.find((user) => user.id === userId)
+    const userToReturn = updatedUsers.find((user) => user.id === Number(userId))
 
     if (userToReturn) {
     res.status(200).send(userToReturn);
@@ -287,7 +450,111 @@ app.patch('/api/:userId/favorites', async (req, res) => {
       res.status(500).send({ message: "Erreur du serveur." });
   }
 });
+// 📍 NOUVELLE ROUTE : post Reviews
+app.post('/api/reviews', async (req, res) => {
+  
+  try {
 
+    const { userId, rating, comment, title } = req.body;
+    const newId = Date.now(); 
+    const newCreatedAt = new Date().toISOString();
+    const newReview = {
+      id: newId,
+      userId: userId,
+      title: title,
+      rating: rating,
+      comment: comment,
+      createdAt: newCreatedAt
+    }
+    const allReviews = await readReviews();
+    allReviews.push(newReview);
+    await fs.writeFile('reviews.json', JSON.stringify(allReviews, null, 2), 'utf-8');
+    res.status(201).json(newReview);
+
+  } catch (error) {
+    console.error("Erreur lors de la sauvegarde de l'avis:", error);
+    res.status(500).send("Erreur serveur");
+  }
+});
+// 📍 NOUVELLE ROUTE :  lire Reviews 
+app.get('/api/reviews', async (req, res) => {
+  
+  try {
+
+    const reviews = await readReviews(); 
+    res.json(reviews);
+
+  } catch (error) {
+    console.error("Erreur lors de la sauvegarde de l'avis:", error);
+    res.status(500).send("Erreur serveur");
+  }
+});
+
+
+// 📍Routes pour les badges🎖️
+
+// 📍Lister les badges dispos
+app.get('/api/badges', async (req, res) => {
+  try {
+    const badges = await readBadges();
+    res.json(badges);
+  }
+  catch (error) {
+    console.error ("Erreur lecture badge:", error);
+    res.status (500).json({message:"Erreur serveur."});
+  }
+});
+
+// 📍lister les badges débloqués par un user
+app.get('/api/users/:userId/badges', async (req, res) => {
+  try {
+    const [users, badges] = await Promise.all([readUsers(), readBadges()]);
+    
+    const user = users.find(u => u.id ===Number(req.params.userId));
+    
+    if(!user) {
+      return res.status(404).json({ message: 'Utilisateur non trouvé.'});
+    }
+    
+    // Recupérer les détails des badges
+    const unlockedDetails = (user.unlockedBadges || [].map(badgeId => badges.find(b => b.id === badgeId)).filter(Boolean));
+    
+    res.json(unlockedDetails);
+  } catch (error) {
+    res.status(500).json({message: "Erreur serveur."});
+  }
+});
+
+// 📍Enregistre la réalisation des exos
+app.post('/api/achievements/track', async(req, res) => {
+  const {userId, exerciseId} = req.body;
+  
+  if (!userId || !exerciseId) {
+    return res.status(400).json({message: 'Donnée manquantes: userID et exerciseId sont requis.'});
+  }
+  
+  try {
+    const [users, badges] = await Promise.all([readUsers(), readBadges()]);
+    const userIndex = users.findIndex(u=> u.id === Number(userId));
+    if (userIndex === -1) {
+      return res.status(404).json({message: 'Utilisteur non trouvé.'});
+    }
+    
+    const newlyUnlocked = checkAndUnlockBadges(users[userIndex], {exerciseId}, badges);
+    await writeUsers(users);
+    
+    res.json({
+      status: 'success',
+      newlyUnlockedBadges : newlyUnlocked,
+      userStats: {
+        totalExercises: users[userIndex].totalExercisesCompleted
+      }
+    });
+  } catch (error) {
+    console.error("Erreur lors du traitement de l'exercice:", error);
+    res.status(500).json({message: 'Erreur interne du serveur.', error: error.message});
+  }
+});
 
 // ✅ Lancement du serveur
 app.listen(PORT, () => {

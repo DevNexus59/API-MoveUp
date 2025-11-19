@@ -8,7 +8,13 @@
     "partieDuCorps": "Cou",
     "equipement": "Bande élastique",
     "musclesSecondaires": "Épaules",
-    "instructions": "1 - Tenez-vous debout, pieds à la largeur des épaules, la bande sous les pieds. 2 - Gardez les bras droits et détendus. 3 - Haussez les épaules vers le haut. 4 - Maintenez la contraction puis relâchez lentement. 5 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Tenez-vous debout, pieds à la largeur des épaules, la bande sous les pieds.",
+      "2 - Gardez les bras droits et détendus.",
+      "3 - Haussez les épaules vers le haut.",
+      "4 - Maintenez la contraction puis relâchez lentement.",
+      "5 - Répétez le mouvement."
+      ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -22,7 +28,12 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Barre",
     "musclesSecondaires": "Pectoraux, épaules",
-    "instructions": "1 - Allongez-vous sur un banc décliné. 2 - Descendez la barre vers le front en fléchissant les coudes. 3 - Remontez lentement en contractant les triceps. 4 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Allongez-vous sur un banc décliné.",
+      "2 - Descendez la barre vers le front en fléchissant les coudes.",
+      "3 - Remontez lentement en contractant les triceps.",
+      "4 - Répétez le mouvement."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -36,7 +47,11 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Quadriceps, ischios, mollets, gainage",
-    "instructions": "1 - Placez-vous en position de pompe. 2 - Descendez puis, en remontant, donnez un coup de pied sur le côté. 3 - Alternez les jambes à chaque répétition.",
+    "instructions": [
+      "1 - Placez-vous en position de pompe.",
+      "2 - Descendez puis, en remontant, donnez un coup de pied sur le côté.",
+      "3 - Alternez les jambes à chaque répétition."
+    ],
     "duree": "45 secondes",
     "difficulte": "intermédiaire",
     "activite": "gainage"
@@ -50,7 +65,12 @@
     "partieDuCorps": "Poitrine",
     "equipement": "Câble + ballon de stabilité",
     "musclesSecondaires": "Deltoïdes, triceps",
-    "instructions": "1 - Placez un ballon incliné face à une poulie haute. 2 - Tenez les poignées et ouvrez les bras en gardant une légère flexion. 3 - Ramenez-les devant la poitrine. 4 - Répétez.",
+    "instructions": [
+      "1 - Placez un ballon incliné face à une poulie haute.",
+      "2 - Tenez les poignées et ouvrez les bras en gardant une légère flexion.",
+      "3 - Ramenez-les devant la poitrine.",
+      "4 - Répétez."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -64,7 +84,12 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Kettlebells",
     "musclesSecondaires": "Avant-bras, épaules",
-    "instructions": "1 - Debout, kettlebell dans chaque main. 2 - Fléchissez légèrement les genoux et propulsez les kettlebells vers les épaules. 3 - Attrapez-les en position haute, puis redescendez. 4 - Alternez les bras.",
+    "instructions": [
+      "1 - Debout, kettlebell dans chaque main.",
+      "2 - Fléchissez légèrement les genoux et propulsez les kettlebells vers les épaules.",
+      "3 - Attrapez-les en position haute, puis redescendez.",
+      "4 - Alternez les bras."
+    ],
     "duree": "35 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -78,7 +103,11 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Haltères",
     "musclesSecondaires": "Quadriceps, ischios, mollets",
-    "instructions": "1 - Tenez une haltère dans chaque main. 2 - Avancez une jambe et pliez les deux genoux. 3 - Revenez à la position de départ et changez de jambe.",
+    "instructions": [
+      "1 - Tenez une haltère dans chaque main.",
+      "2 - Avancez une jambe et pliez les deux genoux.",
+      "3 - Revenez à la position de départ et changez de jambe."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -92,7 +121,11 @@
     "partieDuCorps": "Taille",
     "equipement": "Barre",
     "musclesSecondaires": "Épaules, pectoraux",
-    "instructions": "1 - Allongez-vous au sol, barre sur la poitrine. 2 - Montez lentement jusqu’à 45°, puis redescendez. 3 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Allongez-vous au sol, barre sur la poitrine.",
+      "2 - Montez lentement jusqu’à 45°, puis redescendez.",
+      "3 - Répétez le mouvement."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "gainage"
@@ -106,7 +139,11 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Câble",
     "musclesSecondaires": "Avant-bras",
-    "instructions": "1 - Faites face à la poulie. 2 - Saisissez la poignée paume vers le bas. 3 - Pliez le coude jusqu’à l’épaule puis redescendez lentement.",
+    "instructions": [
+      "1 - Faites face à la poulie.",
+      "2 - Saisissez la poignée paume vers le bas.",
+      "3 - Pliez le coude jusqu’à l’épaule puis redescendez lentement."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -120,7 +157,11 @@
     "partieDuCorps": "Bras inférieurs",
     "equipement": "Haltère",
     "musclesSecondaires": "Fléchisseurs et extenseurs du poignet",
-    "instructions": "1 - Assis, avant-bras sur la cuisse. 2 - Laissez l’haltère rouler dans les doigts, puis refermez la main pour le remonter. 3 - Changez de main après les répétitions.",
+    "instructions": [
+      "1 - Assis, avant-bras sur la cuisse.",
+      "2 - Laissez l’haltère rouler dans les doigts, puis refermez la main pour le remonter.",
+      "3 - Changez de main après les répétitions."
+    ],
     "duree": "25 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -134,7 +175,11 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Bande élastique",
     "musclesSecondaires": "Ischios, bas du dos",
-    "instructions": "1 - Debout, bande autour des chevilles. 2 - Penchez-vous vers l’avant en gardant le dos droit. 3 - Remontez en contractant les fessiers.",
+    "instructions": [
+      "1 - Debout, bande autour des chevilles.",
+      "2 - Penchez-vous vers l’avant en gardant le dos droit.",
+      "3 - Remontez en contractant les fessiers."
+    ],
     "duree": "35 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -148,7 +193,11 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Kettlebell",
     "musclesSecondaires": "Quadriceps, ischios, mollets",
-    "instructions": "1 - Tenez le kettlebell contre la poitrine. 2 - Descendez en squat jusqu’à ce que les cuisses soient parallèles. 3 - Poussez dans les talons pour remonter.",
+    "instructions": [
+      "1 - Tenez le kettlebell contre la poitrine.",
+      "2 - Descendez en squat jusqu’à ce que les cuisses soient parallèles.",
+      "3 - Poussez dans les talons pour remonter."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -162,7 +211,11 @@
     "partieDuCorps": "Poitrine",
     "equipement": "Machine à levier",
     "musclesSecondaires": "Triceps, épaules",
-    "instructions": "1 - Ajustez le siège. 2 - Poussez les poignées vers l’avant jusqu’à extension complète. 3 - Revenez lentement en position initiale.",
+    "instructions": [
+      "1 - Ajustez le siège.",
+      "2 - Poussez les poignées vers l’avant jusqu’à extension complète.",
+      "3 - Revenez lentement en position initiale."
+    ],
     "duree": "35 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -176,7 +229,11 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Haltères",
     "musclesSecondaires": "Avant-bras",
-    "instructions": "1 - Assis sur banc incliné, bras tendus. 2 - Remontez les haltères jusqu’aux épaules. 3 - Redescendez lentement.",
+    "instructions": [
+      "1 - Assis sur banc incliné, bras tendus.",
+      "2 - Remontez les haltères jusqu’aux épaules.",
+      "3 - Redescendez lentement."
+    ],
     "duree": "30 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -190,7 +247,11 @@
     "partieDuCorps": "Dos",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Épaules, triceps",
-    "instructions": "1 - Faites face au mur. 2 - Placez une main contre le mur et penchez-vous légèrement. 3 - Poussez contre le mur pour activer le dos.",
+    "instructions": [
+      "1 - Faites face au mur.",
+      "2 - Placez une main contre le mur et penchez-vous légèrement.",
+      "3 - Poussez contre le mur pour activer le dos."
+    ],
     "duree": "20 secondes",
     "difficulte": "facile",
     "activite": "stretching"
@@ -204,7 +265,11 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Bosu ball",
     "musclesSecondaires": "Fessiers, ischios, mollets",
-    "instructions": "1 - Placez-vous sur le bosu. 2 - Fléchissez les genoux pour descendre en squat. 3 - Remontez lentement en gardant l’équilibre.",
+    "instructions": [
+      "1 - Placez-vous sur le bosu.",
+      "2 - Fléchissez les genoux pour descendre en squat.",
+      "3 - Remontez lentement en gardant l’équilibre."
+    ],
     "duree": "40 secondes",
     "difficulte": "difficile",
     "activite": "gainage"
@@ -218,7 +283,11 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Pectoraux, épaules",
-    "instructions": "1 - En position de planche, mains proches. 2 - Descendez lentement puis poussez pour remonter. 3 - Gardez les coudes près du corps.",
+    "instructions": [
+      "1 - En position de planche, mains proches.",
+      "2 - Descendez lentement puis poussez pour remonter.",
+      "3 - Gardez les coudes près du corps."
+    ],
     "duree": "35 secondes",
     "difficulte": "intermédiaire",
     "activite": "gainage"
@@ -232,7 +301,11 @@
     "partieDuCorps": "Épaules",
     "equipement": "Haltère",
     "musclesSecondaires": "Triceps, haut du dos",
-    "instructions": "1 - Tenez l’haltère à hauteur d’épaule. 2 - Poussez vers le haut jusqu’à extension complète. 3 - Redescendez lentement.",
+    "instructions": [
+      "1 - Tenez l’haltère à hauteur d’épaule.",
+      "2 - Poussez vers le haut jusqu’à extension complète.",
+      "3 - Redescendez lentement."
+    ],
     "duree": "30 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -246,7 +319,11 @@
     "partieDuCorps": "Poitrine",
     "equipement": "Câble",
     "musclesSecondaires": "Deltoïdes, triceps",
-    "instructions": "1 - Tenez les poignées des câbles. 2 - Ramenez les bras vers l’avant en les croisant. 3 - Revenez lentement à la position initiale.",
+    "instructions": [
+      "1 - Tenez les poignées des câbles.",
+      "2 - Ramenez les bras vers l’avant en les croisant.",
+      "3 - Revenez lentement à la position initiale."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -260,7 +337,11 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Bande élastique",
     "musclesSecondaires": "Épaules",
-    "instructions": "1 - Tenez la bande dans chaque main, bras tendus sur les côtés. 2 - Pliez les coudes puis tendez-les à nouveau. 3 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Tenez la bande dans chaque main, bras tendus sur les côtés.",
+      "2 - Pliez les coudes puis tendez-les à nouveau.",
+      "3 - Répétez le mouvement."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -274,7 +355,11 @@
     "partieDuCorps": "Taille",
     "equipement": "Haltère",
     "musclesSecondaires": "Obliques",
-    "instructions": "1 - Debout, haltère dans une main. 2 - Inclinez le buste sur le côté opposé. 3 - Revenez lentement en position neutre et changez de côté.",
+    "instructions": [
+      "1 - Debout, haltère dans une main.",
+      "2 - Inclinez le buste sur le côté opposé.",
+      "3 - Revenez lentement en position neutre et changez de côté."
+    ],
     "duree": "25 secondes",
     "difficulte": "facile",
     "activite": "gainage"
@@ -288,7 +373,13 @@
     "partieDuCorps": "Poitrine",
     "equipement": "Machine à levier assistée",
     "musclesSecondaires": "Triceps, épaules",
-    "instructions": "1 - Réglez la hauteur de la machine et positionnez vos genoux sur le support. 2 - Saisissez les poignées avec une prise large. 3 - Descendez en fléchissant les coudes jusqu’à ce que vos bras soient parallèles au sol. 4 - Poussez pour revenir en position initiale. 5 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Réglez la hauteur de la machine et positionnez vos genoux sur le support.",
+      "2 - Saisissez les poignées avec une prise large.",
+      "3 - Descendez en fléchissant les coudes jusqu’à ce que vos bras soient parallèles au sol.",
+      "4 - Poussez pour revenir en position initiale.",
+      "5 - Répétez le mouvement."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -302,7 +393,14 @@
     "partieDuCorps": "Cardio",
     "equipement": "Vélo stationnaire",
     "musclesSecondaires": "Quadriceps, ischios, mollets",
-    "instructions": "1 - Réglez la selle et la résistance. 2 - Placez vos pieds sur les pédales. 3 - Pédalez à rythme constant. 4 - Ajustez la résistance selon votre intensité. 5 - Maintenez le dos droit et engagez le tronc. 6 - Terminez par un retour au calme et des étirements.",
+    "instructions": [
+      "1 - Réglez la selle et la résistance.",
+      "2 - Placez vos pieds sur les pédales.",
+      "3 - Pédalez à rythme constant.",
+      "4 - Ajustez la résistance selon votre intensité.",
+      "5 - Maintenez le dos droit et engagez le tronc.",
+      "6 - Terminez par un retour au calme et des étirements."
+    ],
     "duree": "5 minutes",
     "difficulte": "facile",
     "activite": "cardio"
@@ -316,7 +414,13 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Haltères",
     "musclesSecondaires": "Avant-bras",
-    "instructions": "1 - Asseyez-vous sur un banc, haltères en main, paumes vers le haut. 2 - Placez vos coudes contre les cuisses. 3 - Pliez les bras vers les épaules. 4 - Redescendez lentement. 5 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Asseyez-vous sur un banc, haltères en main, paumes vers le haut.",
+      "2 - Placez vos coudes contre les cuisses.",
+      "3 - Pliez les bras vers les épaules.",
+      "4 - Redescendez lentement.",
+      "5 - Répétez le mouvement."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -330,7 +434,12 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Machine à levier",
     "musclesSecondaires": "Fessiers, ischios",
-    "instructions": "1 - Réglez le siège pour un angle de genoux à 90°. 2 - Poussez lentement vos jambes vers l’extérieur. 3 - Revenez doucement à la position initiale. 4 - Répétez le mouvement.",
+    "instructions": [
+      "1 - Réglez le siège pour un angle de genoux à 90°.",
+      "2 - Poussez lentement vos jambes vers l’extérieur.",
+      "3 - Revenez doucement à la position initiale.",
+      "4 - Répétez le mouvement."
+    ],
     "duree": "35 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -344,7 +453,12 @@
     "partieDuCorps": "Poitrine",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Triceps, épaules",
-    "instructions": "1 - Saisissez les barres parallèles, bras tendus. 2 - Descendez lentement jusqu’à ce que vos épaules soient sous les coudes. 3 - Poussez pour revenir en position initiale. 4 - Répétez.",
+    "instructions": [
+      "1 - Saisissez les barres parallèles, bras tendus.",
+      "2 - Descendez lentement jusqu’à ce que vos épaules soient sous les coudes.",
+      "3 - Poussez pour revenir en position initiale.",
+      "4 - Répétez."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -358,7 +472,13 @@
     "partieDuCorps": "Poitrine",
     "equipement": "Barre",
     "musclesSecondaires": "Deltoïdes, triceps",
-    "instructions": "1 - Tenez la barre bras tendus devant vous. 2 - Levez-la à hauteur d’épaules puis redescendez. 3 - Enchaînez en amenant la barre derrière la tête (pull-over). 4 - Revenez à la position de départ. 5 - Répétez.",
+    "instructions": [
+      "1 - Tenez la barre bras tendus devant vous.",
+      "2 - Levez-la à hauteur d’épaules puis redescendez.",
+      "3 - Enchaînez en amenant la barre derrière la tête (pull-over).",
+      "4 - Revenez à la position de départ.",
+      "5 - Répétez."
+    ],
     "duree": "45 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -372,7 +492,13 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Haltères",
     "musclesSecondaires": "Épaules",
-    "instructions": "1 - Asseyez-vous droit, haltères en main. 2 - Réalisez un curl jusqu’aux épaules. 3 - Tournez les poignets et poussez les haltères au-dessus de la tête. 4 - Revenez lentement. 5 - Répétez.",
+    "instructions": [
+      "1 - Asseyez-vous droit, haltères en main.",
+      "2 - Réalisez un curl jusqu’aux épaules.",
+      "3 - Tournez les poignets et poussez les haltères au-dessus de la tête.",
+      "4 - Revenez lentement.",
+      "5 - Répétez."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -386,7 +512,14 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Barre",
     "musclesSecondaires": "Ischios, fessiers, épaules, triceps",
-    "instructions": "1 - Placez la barre au sol. 2 - Fléchissez les genoux et attrapez-la. 3 - Soulevez-la jusqu’aux épaules (épaulé). 4 - Poussez-la au-dessus de la tête (jeté). 5 - Redescendez contrôlé. 6 - Répétez.",
+    "instructions": [
+      "1 - Placez la barre au sol.",
+      "2 - Fléchissez les genoux et attrapez-la.",
+      "3 - Soulevez-la jusqu’aux épaules (épaulé).",
+      "4 - Poussez-la au-dessus de la tête (jeté).",
+      "5 - Redescendez contrôlé.",
+      "6 - Répétez."
+    ],
     "duree": "50 secondes",
     "difficulte": "difficile",
     "activite": "musculation"
@@ -400,7 +533,12 @@
     "partieDuCorps": "Jambes inférieures",
     "equipement": "Machine à levier",
     "musclesSecondaires": "Soléaire, stabilisateurs de cheville",
-    "instructions": "1 - Positionnez vos pieds sur la plaque. 2 - Poussez sur la pointe des pieds pour lever les talons. 3 - Redescendez lentement. 4 - Répétez.",
+    "instructions": [
+      "1 - Positionnez vos pieds sur la plaque.",
+      "2 - Poussez sur la pointe des pieds pour lever les talons.",
+      "3 - Redescendez lentement.",
+      "4 - Répétez."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -414,7 +552,12 @@
     "partieDuCorps": "Bras inférieurs",
     "equipement": "Barre",
     "musclesSecondaires": "Biceps, brachial antérieur",
-    "instructions": "1 - Assis, avant-bras sur les cuisses, barre en main. 2 - Laissez-la descendre dans les doigts. 3 - Repliez les poignets pour remonter la barre. 4 - Répétez lentement.",
+    "instructions": [
+      "1 - Assis, avant-bras sur les cuisses, barre en main.",
+      "2 - Laissez-la descendre dans les doigts.",
+      "3 - Repliez les poignets pour remonter la barre.",
+      "4 - Répétez lentement."
+    ],
     "duree": "25 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -428,7 +571,12 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Ischios, quadriceps, mollets",
-    "instructions": "1 - Debout, bras tendus sur les côtés. 2 - Penchez-vous pour toucher un orteil avec la main opposée. 3 - Relevez-vous et changez de côté. 4 - Alternez en rythme.",
+    "instructions": [
+      "1 - Debout, bras tendus sur les côtés.",
+      "2 - Penchez-vous pour toucher un orteil avec la main opposée.",
+      "3 - Relevez-vous et changez de côté.",
+      "4 - Alternez en rythme."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "échauffement"
@@ -442,7 +590,13 @@
     "partieDuCorps": "Dos",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Biceps, avant-bras",
-    "instructions": "1 - Placez-vous sous une barre à hauteur de taille. 2 - Attrapez-la et tendez le corps. 3 - Tirez la poitrine vers la barre. 4 - Redescendez lentement. 5 - Répétez.",
+    "instructions": [
+      "1 - Placez-vous sous une barre à hauteur de taille.",
+      "2 - Attrapez-la et tendez le corps.",
+      "3 - Tirez la poitrine vers la barre.",
+      "4 - Redescendez lentement.",
+      "5 - Répétez."
+    ],
     "duree": "35 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -456,7 +610,13 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Haltères",
     "musclesSecondaires": "Avant-bras",
-    "instructions": "1 - Debout, haltères en main, paumes vers le corps. 2 - Gardez les coudes fixes. 3 - Levez les haltères en contractant les biceps. 4 - Redescendez lentement. 5 - Répétez.",
+    "instructions": [
+      "1 - Debout, haltères en main, paumes vers le corps.",
+      "2 - Gardez les coudes fixes.",
+      "3 - Levez les haltères en contractant les biceps.",
+      "4 - Redescendez lentement.",
+      "5 - Répétez."
+    ],
     "duree": "30 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -470,7 +630,13 @@
     "partieDuCorps": "Dos",
     "equipement": "Barre",
     "musclesSecondaires": "Biceps, avant-bras",
-    "instructions": "1 - Installez un banc incliné. 2 - Attrapez la barre en prise inversée. 3 - Tirez vers la poitrine. 4 - Redescendez lentement. 5 - Répétez.",
+    "instructions": [
+      "1 - Installez un banc incliné.",
+      "2 - Attrapez la barre en prise inversée.",
+      "3 - Tirez vers la poitrine.",
+      "4 - Redescendez lentement.",
+      "5 - Répétez."
+    ],
     "duree": "40 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -484,7 +650,13 @@
     "partieDuCorps": "Dos",
     "equipement": "Machine Smith",
     "musclesSecondaires": "Biceps, deltoïdes postérieurs",
-    "instructions": "1 - Asseyez-vous face à la barre. 2 - Attrapez-la en prise serrée. 3 - Tirez vers vous en serrant les omoplates. 4 - Revenez lentement. 5 - Répétez.",
+    "instructions": [
+      "1 - Asseyez-vous face à la barre.",
+      "2 - Attrapez-la en prise serrée.",
+      "3 - Tirez vers vous en serrant les omoplates.",
+      "4 - Revenez lentement.",
+      "5 - Répétez."
+    ],
     "duree": "35 secondes",
     "difficulte": "intermédiaire",
     "activite": "musculation"
@@ -498,7 +670,12 @@
     "partieDuCorps": "Jambes supérieures",
     "equipement": "Assistance manuelle",
     "musclesSecondaires": "Ischios, fessiers",
-    "instructions": "1 - Allongez-vous sur le ventre. 2 - Attrapez un pied et tirez-le vers les fessiers. 3 - Maintenez 20 à 30 secondes. 4 - Changez de jambe.",
+    "instructions": [
+      "1 - Allongez-vous sur le ventre.",
+      "2 - Attrapez un pied et tirez-le vers les fessiers.",
+      "3 - Maintenez 20 à 30 secondes.",
+      "4 - Changez de jambe."
+    ],
     "duree": "40 secondes",
     "difficulte": "facile",
     "activite": "étirement"
@@ -512,7 +689,13 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Machine à levier",
     "musclesSecondaires": "Avant-bras",
-    "instructions": "1 - Positionnez les bras sur le support. 2 - Attrapez les poignées en prise supinée. 3 - Pliez les bras jusqu’aux épaules. 4 - Redescendez lentement. 5 - Répétez.",
+    "instructions": [
+      "1 - Positionnez les bras sur le support.",
+      "2 - Attrapez les poignées en prise supinée.",
+      "3 - Pliez les bras jusqu’aux épaules.",
+      "4 - Redescendez lentement.",
+      "5 - Répétez."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -526,7 +709,12 @@
     "partieDuCorps": "Jambes inférieures",
     "equipement": "Haltère",
     "musclesSecondaires": "Ischios, fessiers",
-    "instructions": "1 - Asseyez-vous, haltère posé sur une cuisse. 2 - Soulevez le talon le plus haut possible. 3 - Redescendez lentement. 4 - Changez de jambe et répétez.",
+    "instructions": [
+      "1 - Asseyez-vous, haltère posé sur une cuisse.",
+      "2 - Soulevez le talon le plus haut possible.",
+      "3 - Redescendez lentement.",
+      "4 - Changez de jambe et répétez."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -540,7 +728,12 @@
     "partieDuCorps": "Épaules",
     "equipement": "Câble",
     "musclesSecondaires": "Coiffe des rotateurs, trapèzes",
-    "instructions": "1 - Tenez la poignée, coude plié. 2 - Faites pivoter l’avant-bras vers l’extérieur. 3 - Revenez doucement. 4 - Répétez des deux côtés.",
+    "instructions": [
+      "1 - Tenez la poignée, coude plié.",
+      "2 - Faites pivoter l’avant-bras vers l’extérieur.",
+      "3 - Revenez doucement.",
+      " - Répétez des deux côtés."
+    ],
     "duree": "30 secondes",
     "difficulte": "facile",
     "activite": "musculation"
@@ -554,10 +747,319 @@
     "partieDuCorps": "Bras supérieurs",
     "equipement": "Poids du corps",
     "musclesSecondaires": "Épaules, gainage",
-    "instructions": "1 - Placez les mains au sol largeur d’épaules. 2 - Montez les jambes pour être en équilibre. 3 - Maintenez la position. 4 - Revenez doucement.",
+    "instructions": [
+      "1 - Placez les mains au sol largeur d’épaules.",
+      "2 - Montez les jambes pour être en équilibre.",
+      "3 - Maintenez la position.",
+      "4 - Revenez doucement."
+    ],
     "duree": "30 secondes",
     "difficulte": "difficile",
     "activite": "musculation"
+  },
+  {
+    "id": 41,
+    "exerciseId": "f9lVSSI",
+    "nom": "Sauts écartés (homme)",
+    "gifUrl": "https://static.exercisedb.dev/media/f9lVSSI.gif",
+    "muscleCible": "Système cardiovasculaire",
+    "partieDuCorps": "Cardio",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Quadriceps, ischio-jambiers, mollets",
+    "instructions": [
+      "1 - Tenez-vous debout, pieds largeur épaules.",
+      "2 - Pliez légèrement les genoux et descendez en position de squat.",
+      "3 - Sautez de façon explosive.",
+      "4 - En l’air, écartez les jambes et ouvrez les bras.",
+      "5 - Atterrissez en douceur, genoux fléchis.",
+      "6 - Répétez."
+    ],
+    "duree": "30 secondes",
+    "difficulte": "débutant",
+    "activite": "cardio"
+  },
+  {
+    "id": 42,
+    "exerciseId": "oLrKqDH",
+    "nom": "Course sur place",
+    "gifUrl": "https://static.exercisedb.dev/media/oLrKqDH.gif",
+    "muscleCible": "Système cardiovasculaire",
+    "partieDuCorps": "Cardio",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Quadriceps, ischio-jambiers, mollets",
+    "instructions": [
+      "1 - Tenez-vous debout, pieds largeur hanches.",
+      "2 - Gainez le tronc et relâchez le haut du corps.",
+      "3 - Commencez à trottiner sur place, genoux hauts.",
+      "4 - Gardez un rythme constant.",
+      "5 - Maintenez une respiration régulière."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "cardio"
+  },
+  {
+    "id": 43,
+    "exerciseId": "CcWEoWV",
+    "nom": "Course à petites foulées",
+    "gifUrl": "https://static.exercisedb.dev/media/CcWEoWV.gif",
+    "muscleCible": "Système cardiovasculaire",
+    "partieDuCorps": "Cardio",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Quadriceps, ischio-jambiers, mollets",
+    "instructions": [
+      "1 - Placez-vous debout dans un espace dégagé.",
+      "2 - Tenez-vous droit, pieds largeur hanches.",
+      "3 - Commencez à courir sur place, genoux hauts.",
+      "4 - Avancez en petites foulées rapides.",
+      "5 - Continuez pendant toute la durée de l’exercice."
+    ],
+    "duree": "45 secondes",
+    "difficulte": "intermédiaire",
+    "activite": "cardio"
+  },
+  {
+    "id": 44,
+    "exerciseId": "5MRH8H2",
+    "nom": "Pas de ski",
+    "gifUrl": "https://static.exercisedb.dev/media/5MRH8H2.gif",
+    "muscleCible": "Système cardiovasculaire",
+    "partieDuCorps": "Cardio",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Quadriceps, ischio-jambiers, fessiers, mollets",
+    "instructions": [
+      "1 - Placez-vous debout, pieds largeur épaules.",
+      "2 - Fléchissez légèrement les genoux.",
+      "3 - Sautez à droite en balançant la jambe gauche derrière vous.",
+      "4 - Sautez immédiatement à gauche en inversant les jambes.",
+      "5 - Continuez en alternance comme un mouvement de ski."
+    ],
+    "duree": "40 secondes",
+    "difficulte": "intermédiaire",
+    "activite": "cardio"
+  },
+  {
+    "id": 45,
+    "exerciseId": "y5p0H8a",
+    "nom": "Course sur place (matériel)",
+    "gifUrl": "https://static.exercisedb.dev/media/y5p0H8a.gif",
+    "muscleCible": "Système cardiovasculaire",
+    "partieDuCorps": "Cardio",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Quadriceps, ischio-jambiers, mollets",
+    "instructions": [
+      "1 - Tenez-vous droit, pieds largeur hanches.",
+      "2 - Gainez le tronc.",
+      "3 - Commencez à courir sur place en levant les genoux.",
+      "4 - Maintenez une cadence régulière.",
+      "5 - Respirez profondément et gardez une bonne posture."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "cardio"
+  },
+  {
+    "id": 46,
+    "exerciseId": "1jXLYEw",
+    "nom": "Étirement latéral debout",
+    "gifUrl": "https://static.exercisedb.dev/media/1jXLYEw.gif",
+    "muscleCible": "Grand dorsal",
+    "partieDuCorps": "Dos",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Épaules, obliques",
+    "instructions": [
+      "1 - Placez-vous debout, pieds largeur épaules.",
+      "2 - Tendez les bras sur les côtés, parallèles au sol.",
+      "3 - Inclinez lentement le haut du corps d’un côté pour étirer le flanc et le grand dorsal.",
+      "4 - Maintenez l’étirement 15 à 30 secondes.",
+      "5 - Revenez au centre et répétez de l’autre côté.",
+      "6 - Répétez autant de fois que nécessaire."
+    ],
+    "duree": "30 secondes par côté",
+    "difficulte": "débutant",
+    "activite": "étirement"
+  },
+  {
+    "id": 47,
+    "exerciseId": "oQRJYkC",
+    "nom": "Étirement latéral du cou",
+    "gifUrl": "https://static.exercisedb.dev/media/oQRJYkC.gif",
+    "muscleCible": "Élévateur de la scapula",
+    "partieDuCorps": "Cou",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Trapèzes, sterno-cléido-mastoïdien",
+    "instructions": [
+      "1 - Tenez-vous assis ou debout, épaules relâchées.",
+      "2 - Inclinez la tête à droite, oreille vers épaule.",
+      "3 - Posez la main droite sur le côté gauche de la tête et tirez légèrement.",
+      "4 - Maintenez 15 à 30 secondes.",
+      "5 - Répétez de l'autre côté.",
+      "6 - Effectuez 2 à 3 répétitions par côté."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "étirement"
+  },
+  {
+    "id": 48,
+    "exerciseId": "2Ryn564",
+    "nom": "Étirement assisté du droit fémoral (couché)",
+    "gifUrl": "https://static.exercisedb.dev/media/2Ryn564.gif",
+    "muscleCible": "Abdominaux",
+    "partieDuCorps": "Taille",
+    "equipement": "Assistance",
+    "musclesSecondaires": "Quadriceps",
+    "instructions": [
+      "1 - Allongez-vous sur le ventre, jambes tendues.",
+      "2 - Pliez le genou droit et attrapez votre pied ou cheville.",
+      "3 - Tirez doucement le pied vers les fessiers pour étirer l’avant de la cuisse.",
+      "4 - Maintenez 20 à 30 secondes.",
+      "5 - Relâchez et changez de côté."
+    ],
+    "duree": "1 minute",
+    "difficulte": "intermédiaire",
+    "activite": "étirement"
+  },
+  {
+    "id": 49,
+    "exerciseId": "yn0LjwL",
+    "nom": "Étirement assisté des fessiers (couché)",
+    "gifUrl": "https://static.exercisedb.dev/media/yn0LjwL.gif",
+    "muscleCible": "Fessiers",
+    "partieDuCorps": "Haut des jambes",
+    "equipement": "Assistance",
+    "musclesSecondaires": "Ischio-jambiers",
+    "instructions": [
+      "1 - Allongez-vous sur le dos, jambes tendues.",
+      "2 - Pliez le genou droit et posez la cheville droite sur la cuisse gauche.",
+      "3 -Attrapez la cuisse gauche et tirez-la vers la poitrine.",
+      "4 - Maintenez 20 à 30 secondes.",
+      "5 - Relâchez et répétez de l’autre côté."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "étirement"
+  },
+  {
+    "id": 50,
+    "exerciseId": "rmEukuS",
+    "nom": "Pont unilatéral avec jambe tendue",
+    "gifUrl": "https://static.exercisedb.dev/media/rmEukuS.gif",
+    "muscleCible": "Fessiers",
+    "partieDuCorps": "Haut des jambes",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Ischio-jambiers, quadriceps",
+    "instructions": [
+      "1 - Allongez-vous sur le dos, genoux pliés, pieds au sol.",
+      "2 - Tendez une jambe devant vous.",
+      "3 - Soulevez les hanches en contractant les fessiers.",
+      "4 - Maintenez brièvement en haut, puis redescendez lentement.",
+      "5 - Répétez puis changez de jambe."
+    ],
+    "duree": "40 secondes par côté",
+    "difficulte": "intermédiaire",
+    "activite": "étirement"
+  },
+  {
+    "id": 51,
+    "exerciseId": "17bqEXD",
+    "nom": "Étirement assis du mollet (homme)",
+    "gifUrl": "https://static.exercisedb.dev/media/17bqEXD.gif",
+    "muscleCible": "Mollets",
+    "partieDuCorps": "Bas des jambes",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Ischio-jambiers",
+    "instructions": [
+      "1 - Asseyez-vous au bord d’une chaise.",
+      "2 - Tendez une jambe devant vous, talon au sol.",
+      "3 - Penchez-vous légèrement en avant.",
+      "4 - Maintenez 20 à 30 secondes.",
+      "5 - Changez de jambe."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "étirement"
+  },
+  {
+    "id": 52,
+    "exerciseId": "QFmz6ch",
+    "nom": "Étirement du bas du dos assis",
+    "gifUrl": "https://static.exercisedb.dev/media/QFmz6ch.gif",
+    "muscleCible": "Grand dorsal",
+    "partieDuCorps": "Dos",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Fessiers, ischio-jambiers",
+    "instructions": [
+      "1 - Asseyez-vous au bord d’une chaise, pieds au sol.",
+      "2 - Placez les mains sur les cuisses ou sur la chaise.",
+      "3 - Penchez-vous doucement vers l’avant, dos droit.",
+      "4 - Maintenez 20 à 30 secondes.",
+      "5 - Revenez lentement et répétez."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "étirement"
+  },
+  {
+    "id": 53,
+    "exerciseId": "BWnJR72",
+    "nom": "Étirement des quadriceps (couché sur le côté)",
+    "gifUrl": "https://static.exercisedb.dev/media/BWnJR72.gif",
+    "muscleCible": "Quadriceps",
+    "partieDuCorps": "Haut des jambes",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Ischio-jambiers",
+    "instructions": [
+      "1 - Allongez-vous sur le côté, jambes tendues.",
+      "2 - Pliez la jambe du dessus et attrapez votre pied.",
+      "3 - Tirez doucement vers les fessiers pour étirer les quadriceps.",
+      "4 - Maintenez 20 à 30 secondes.",
+      "5 - Relâchez et changez de côté."
+    ],
+    "duree": "1 minute",
+    "difficulte": "débutant",
+    "activite": "étirement"
+  },
+  {
+    "id": 54,
+    "exerciseId": "hC6oYY5",
+    "nom": "Étirement assisté des adducteurs (couché sur le côté)",
+    "gifUrl": "https://static.exercisedb.dev/media/hC6oYY5.gif",
+    "muscleCible": "Adducteurs",
+    "partieDuCorps": "Haut des jambes",
+    "equipement": "Assistance",
+    "musclesSecondaires": "Ischio-jambiers, fessiers",
+    "instructions": [
+      "1 - Allongez-vous sur le côté, jambes droites.",
+      "2 - Pliez légèrement la jambe du dessous.",
+      "3 - Placez le pied de la jambe du dessus sur un support.",
+      "4 - Abaissez doucement la jambe du dessus pour étirer l’intérieur de la cuisse.",
+      "5 - Maintenez 20 à 30 secondes.",
+      "6 - Revenez et changez de côté."
+    ],
+    "duree": "1 minute",
+    "difficulte": "intermédiaire",
+    "activite": "étirement"
+  },
+  {
+    "id": 55,
+    "exerciseId": "uOV3Itw",
+    "nom": "Étirement des triceps",
+    "gifUrl": "https://static.exercisedb.dev/media/uOV3Itw.gif",
+    "muscleCible": "Triceps",
+    "partieDuCorps": "Bras",
+    "equipement": "Poids du corps",
+    "musclesSecondaires": "Épaules",
+    "instructions": [
+      "1 - Tenez-vous assis ou debout, dos droit.",
+      "2 - Levez un bras et pliez-le derrière la tête.",
+      "3 - Avec l’autre main, tirez doucement sur le coude.",
+      "4 - Maintenez 15 à 30 secondes.",
+      "5 - Relâchez et changez de bras."
+    ],
+    "duree": "45 secondes par côté",
+    "difficulte": "débutant",
+    "activite": "étirement"
   }
 ]
 

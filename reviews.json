@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1763462868853,
+    "userId": "1",
+    "title": "Excellent ! ",
+    "rating": 3,
+    "comment": "Très satisfait du service !",
+    "createdAt": "2025-11-18T10:47:48.853Z"
+  },
+  {
+    "id": 1763471691944,
+    "userId": "1",
+    "title": "Pas terrible",
+    "rating": 1,
+    "comment": "Epuisant de suivre les exercices.",
+    "createdAt": "2025-11-18T13:14:51.944Z"
+  }
+]
