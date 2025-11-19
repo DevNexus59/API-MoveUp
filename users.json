@@ -30,8 +30,18 @@
   },
   {
     "id": 4,
-    "email": "",
-    "password": "$2b$10$GhegsddKVSzfxoOvrQExA../uJGRnJSEWvuuZAkaFx2bIxN8Z75rC"
+    "email": "joachim.masson.17@gmail.com",
+    "password": "$2a$10$0Dh0gm44/zNX0KW9hoTy9uEbKe3w8P/Mxnt8WdeuWyO0dBz12Bg1e",
+    "name": "M",
+    "firstname": "Jo",
+    "phone": "0605040302",
+    "usertype": "Professionnel",
+    "levelexperiency": "Debutant",
+    "address": "",
+    "city": "",
+    "zipcode": "",
+    "favoriteExercices": [],
+    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg"
   },
   {
     "id": 5,
