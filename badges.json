@@ -1,0 +1,94 @@
+
+[
+    {
+        "id": "prog_pas", 
+        "name": "Premier Pas",
+        "metric": "totalExercisesCompleted", 
+        "requiredValue": 1,
+        "icon": "👶🏼"
+    },
+    { 
+        "id": "prog_habitue",
+        "name": "Habitué",
+        "metric": "totalExercisesCompleted",
+        "requiredValue": 10,
+        "icon": "⚙️"
+    },
+    {
+        "id": "prog_assidu",
+        "name": "Assidu",
+        "metric": "totalExercisesCompleted",
+        "requiredValue": 50,
+        "icon": "🕰️"
+    },
+    {
+        "id": "prog_heros",
+        "name": "Heros",
+        "metric": "totalExercisesCompleted",
+        "requiredValue": 100,
+        "icon": "💪🏼"
+    },
+    {
+        "id": "prog_legende",
+        "name": "Légende",
+        "metric": "totalExercisesCompleted",
+        "requiredValue": 500,
+        "icon": "🪩"
+    },
+    {
+        "id": "reg_sem_parf",
+        "name": "Semaine Parfaite",
+        "metric": "consecutiveDays",
+        "requiredValue": 7,
+        "type": "LOGIC",
+        "icon": "🥇"
+    },
+    {
+        "id": "reg_mois_parf",
+        "name": "Mois Parfait",
+        "metric": "consecutiveDays",
+        "requiredValue": 30,
+        "type": "LOGIC",
+        "icon": "🏅"
+    },
+    {
+        "id": "reg_leve_tot",
+        "name": "Lève tôt",
+        "metric": "totalEarlyWorkouts",
+        "requiredValue": 10,
+        "type": "LOGIC",
+        "icon": "🐓"
+    },
+    {
+        "id": "reg_noctambule",
+        "name": "Noctambule",
+        "metric": "totalLateWorkouts",
+        "requiredValue": 10,
+        "type": "LOGIC",
+        "icon": "🦉"
+    },
+    {
+        "id": "spec_touche",
+        "name": "Touche à tout",
+        "metric": "exercisesTriedCount",
+        "requiredValue": 5,
+        "type": "LOGIC",
+        "icon": "📝"
+    },
+    {
+        "id": "spec_explor",
+        "name": "Explorateur",
+        "metric": "exercisesTriedCount",
+        "requiredValue": 10,
+        "type": "LOGIC",
+        "icon": "🔍"
+    },
+    {
+        "id": "spec_spec",
+        "name": "Spécialiste",
+        "metric": "maxExerciseCount",
+        "requiredValue": 50,
+        "type": "LOGIC",
+        "icon": "🧐"
+    }
+]
