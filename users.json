@@ -53,5 +53,18 @@
     "timerequired": "01:00",
     "diet": "Sans restriction",
     "subscription": "Pro"
+  },
+  {
+    "id": 9,
+    "name": "Harmajabb",
+    "firstname": "Leah",
+    "address": "12 Rue Cavallotti",
+    "zipcode": "75018",
+    "city": "Paris",
+    "phone": "0666666666",
+    "email": "harmajabbmoveUp@gmail.com",
+    "password": "$2b$10$4TJmpxFva6Yj7PODKtJYH.vOSY.ESVppt.aCvO8KITcNpjEKXdDEi",
+    "usertype": "Personnel",
+    "subscription": "Premium"
   }
 ]
