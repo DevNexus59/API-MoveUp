@@ -40,9 +40,12 @@
     "address": "",
     "city": "",
     "zipcode": "",
-    "favoriteExercices": [],
+    "favoriteExercices": [
+      "27NNGFr",
+      "H1PESYI"
+    ],
     "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
-    "totalExercisesCompleted": 4
+    "totalExercisesCompleted": 28
   },
   {
     "id": 5,
