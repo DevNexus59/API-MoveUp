@@ -41,7 +41,8 @@
     "city": "",
     "zipcode": "",
     "favoriteExercices": [],
-    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg"
+    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
+    "totalExercisesCompleted": 4
   },
   {
     "id": 5,
