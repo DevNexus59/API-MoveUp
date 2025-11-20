@@ -15,8 +15,13 @@
     "levelexperiency": "Debutant",
     "timerequired": "01:00",
     "subscription": "Pro",
-    "favoriteExercices": "1,trmte8s",
-    "photoUrl": "/images/profile-pic-1763464838018.png"
+    "photoUrl": "/images/profile-pic-1763464838018.png",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "27NNGFr",
+      "a4F9Oyc",
+      "f9lVSSI"
+    ]
   },
   {
     "id": 2,
