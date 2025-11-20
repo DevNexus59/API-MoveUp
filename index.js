@@ -73,7 +73,7 @@ const writeUsers = async (users) => {
   await fs.writeFile(filePath, JSON.stringify(users, null, 2));
 };
 
-
+// Route de lecture des utilisateurs
 app.get('/api/users', async (req, res) => {
   try {
     const users = await readUsers();
@@ -92,6 +92,35 @@ app.get('/api/users', async (req, res) => {
   }
 });
 
+// Route de lecture des Favoris
+app.get('/api/users/:id/favorites', async (req, res) => {
+  try {
+    const userId = Number(req.params.id);
+    
+    const users = await readUsers();
+    const user = users.find(u => u.id === userId);
+    
+    if (!user) {
+      return res.status(404).send('Utilisateur non trouvé.');
+    }
+    
+    const userFavorites = user.favoriteExercices || [];
+
+    const exercicesRaw = await fs.readFile('exercices.json', 'utf8');
+    const allExercises = JSON.parse(exercicesRaw);
+
+    const favoritesList = allExercises.filter(exercice => 
+        userFavorites.includes(exercice.exerciseId)
+    );
+    // ----------------------
+
+    res.json(favoritesList);
+
+  } catch (error) {
+    console.error("Erreur:", error);
+    res.status(500).send('Erreur serveur.');
+  }
+});
 // 🎖️Fonction utilitaire pour les badges🎖️
 const readBadges = async () => {
   try {
