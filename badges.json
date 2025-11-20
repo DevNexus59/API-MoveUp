@@ -5,35 +5,21 @@
         "name": "Premier Pas",
         "metric": "totalExercisesCompleted", 
         "requiredValue": 1,
-        "icon": "👶🏼"
-    },
-    { 
-        "id": "prog_habitue",
-        "name": "Habitué",
-        "metric": "totalExercisesCompleted",
-        "requiredValue": 10,
-        "icon": "⚙️"
+        "icon": "http://localhost:4000/images/iconesBadges/baby.png"
     },
     {
         "id": "prog_assidu",
         "name": "Assidu",
         "metric": "totalExercisesCompleted",
         "requiredValue": 50,
-        "icon": "🕰️"
+        "icon": "http://localhost:4000/images/iconesBadges/clock.png"
     },
     {
         "id": "prog_heros",
         "name": "Heros",
         "metric": "totalExercisesCompleted",
         "requiredValue": 100,
-        "icon": "💪🏼"
-    },
-    {
-        "id": "prog_legende",
-        "name": "Légende",
-        "metric": "totalExercisesCompleted",
-        "requiredValue": 500,
-        "icon": "🪩"
+        "icon": "http://localhost:4000/images/iconesBadges/biceps.png"
     },
     {
         "id": "reg_sem_parf",
@@ -41,7 +27,7 @@
         "metric": "consecutiveDays",
         "requiredValue": 7,
         "type": "LOGIC",
-        "icon": "🥇"
+        "icon": "http://localhost:4000/images/iconesBadges/week.png"
     },
     {
         "id": "reg_mois_parf",
@@ -49,7 +35,7 @@
         "metric": "consecutiveDays",
         "requiredValue": 30,
         "type": "LOGIC",
-        "icon": "🏅"
+        "icon": "http://localhost:4000/images/iconesBadges/month.png"
     },
     {
         "id": "reg_leve_tot",
@@ -57,7 +43,7 @@
         "metric": "totalEarlyWorkouts",
         "requiredValue": 10,
         "type": "LOGIC",
-        "icon": "🐓"
+        "icon": "http://localhost:4000/images/iconesBadges/day.png"
     },
     {
         "id": "reg_noctambule",
@@ -65,7 +51,7 @@
         "metric": "totalLateWorkouts",
         "requiredValue": 10,
         "type": "LOGIC",
-        "icon": "🦉"
+        "icon": "http://localhost:4000/images/iconesBadges/night.png"
     },
     {
         "id": "spec_touche",
@@ -73,7 +59,7 @@
         "metric": "exercisesTriedCount",
         "requiredValue": 5,
         "type": "LOGIC",
-        "icon": "📝"
+        "icon": "http://localhost:4000/images/iconesBadges/discover.png"
     },
     {
         "id": "spec_explor",
@@ -81,7 +67,7 @@
         "metric": "exercisesTriedCount",
         "requiredValue": 10,
         "type": "LOGIC",
-        "icon": "🔍"
+        "icon": "http://localhost:4000/images/iconesBadges/binoculars.png"
     },
     {
         "id": "spec_spec",
@@ -89,6 +75,6 @@
         "metric": "maxExerciseCount",
         "requiredValue": 50,
         "type": "LOGIC",
-        "icon": "🧐"
+        "icon": "http://localhost:4000/images/iconesBadges/weights.png"
     }
 ]

@@ -14,5 +14,13 @@
     "rating": 1,
     "comment": "Epuisant de suivre les exercices.",
     "createdAt": "2025-11-18T13:14:51.944Z"
+  },
+  {
+    "id": 1763564369062,
+    "userId": "7",
+    "title": "Super",
+    "rating": 5,
+    "comment": "Ce site m’a fait passer de sportif du frigo à vrai humain musclé. Les séances sont top, les coachs motivent bien et mon canapé est officiellement jaloux. Je recommande ! 💪😆",
+    "createdAt": "2025-11-19T14:59:29.062Z"
   }
 ]
