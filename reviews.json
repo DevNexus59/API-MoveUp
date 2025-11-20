@@ -22,5 +22,21 @@
     "rating": 3,
     "comment": "ça a l'air tout cassé ",
     "createdAt": "2025-11-19T10:28:41.027Z"
+  },
+  {
+    "id": 1763564122596,
+    "userId": "9",
+    "title": "j'ai mal aux bras",
+    "rating": 4,
+    "comment": "entraînement assez intense, je ne sens plus mes bras. C'est d'une violence sans nom mais je suis assez maso pour dire que j'adore faire du sport et soulever les haltères allez let's go les gars !!!!",
+    "createdAt": "2025-11-19T14:55:22.596Z"
+  },
+  {
+    "id": 1763564369062,
+    "userId": "7",
+    "title": "Super",
+    "rating": 5,
+    "comment": "Ce site m’a fait passer de sportif du frigo à vrai humain musclé. Les séances sont top, les coachs motivent bien et mon canapé est officiellement jaloux. Je recommande ! 💪😆",
+    "createdAt": "2025-11-19T14:59:29.062Z"
   }
 ]
