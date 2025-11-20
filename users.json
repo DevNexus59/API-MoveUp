@@ -65,6 +65,14 @@
     "email": "harmajabbmoveUp@gmail.com",
     "password": "$2b$10$4TJmpxFva6Yj7PODKtJYH.vOSY.ESVppt.aCvO8KITcNpjEKXdDEi",
     "usertype": "Personnel",
-    "subscription": "Premium"
+    "subscription": "Premium",
+    "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
+    "levelexperiency": "Debutant",
+    "timerequired": "00:01",
+    "diet": "Clean Eating",
+    "favoriteExercices": [
+      "a4F9Oyc"
+    ],
+    "totalExercisesCompleted": 1
   }
 ]
