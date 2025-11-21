@@ -16,6 +16,14 @@
     "createdAt": "2025-11-18T13:14:51.944Z"
   },
   {
+<<<<<<< HEAD
+    "id": 1763569757333,
+    "userId": "10",
+    "title": "MoveUp est top ! ",
+    "rating": 5,
+    "comment": "J'ai repris le sport à mon rythme et ai bénéficié des conseils d'un coach professionnel qui m'a indiqué quels exercices privilégiés. De plus il m'a construit un entraînement adapté à mon emploi du temps.",
+    "createdAt": "2025-11-19T16:29:17.333Z"
+=======
     "id": 1763564122596,
     "userId": "9",
     "title": "j'ai mal aux bras",
@@ -30,5 +38,6 @@
     "rating": 5,
     "comment": "Ce site m’a fait passer de sportif du frigo à vrai humain musclé. Les séances sont top, les coachs motivent bien et mon canapé est officiellement jaloux. Je recommande ! 💪😆",
     "createdAt": "2025-11-19T14:59:29.062Z"
+>>>>>>> 434d52796a7aecdea1a87544c518d52382d72090
   }
 ]
