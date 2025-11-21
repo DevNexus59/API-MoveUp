@@ -15,8 +15,13 @@
     "levelexperiency": "Debutant",
     "timerequired": "01:00",
     "subscription": "Pro",
-    "favoriteExercices": "1,trmte8s",
-    "photoUrl": "/images/profile-pic-1763464838018.png"
+    "photoUrl": "/images/profile-pic-1763464838018.png",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "27NNGFr",
+      "a4F9Oyc",
+      "f9lVSSI"
+    ]
   },
   {
     "id": 2,
@@ -55,6 +60,23 @@
     "subscription": "Pro"
   },
   {
+    "id": 7,
+    "name": "DEBAS",
+    "firstname": "Romain",
+    "address": "22 rue Bonjour",
+    "zipcode": "77200",
+    "city": "Torcy",
+    "phone": "0678912345",
+    "email": "romain@romain.com",
+    "password": "$2b$10$I2hQsczQqKFV4t/lTrgWk.vmgl2BFfQXMhN1qPoA/UVMKEfX2THsW",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "05:00",
+    "diet": "Végétarien",
+    "photoUrl": "/images/IMG_4314-1763564525601.jpeg"
+  },
+  {
     "id": 9,
     "name": "Harmajabb",
     "firstname": "Leah",
@@ -65,6 +87,7 @@
     "email": "harmajabbmoveUp@gmail.com",
     "password": "$2b$10$4TJmpxFva6Yj7PODKtJYH.vOSY.ESVppt.aCvO8KITcNpjEKXdDEi",
     "usertype": "Personnel",
+<<<<<<< HEAD
     "subscription": "Premium"
   },
   {
@@ -87,5 +110,16 @@
     "favoriteExercices": [
       "LMGXZn8"
     ]
+=======
+    "subscription": "Premium",
+    "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
+    "levelexperiency": "Debutant",
+    "timerequired": "00:01",
+    "diet": "Clean Eating",
+    "favoriteExercices": [
+      "a4F9Oyc"
+    ],
+    "totalExercisesCompleted": 1
+>>>>>>> 434d52796a7aecdea1a87544c518d52382d72090
   }
 ]
