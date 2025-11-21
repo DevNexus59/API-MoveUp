@@ -93,8 +93,27 @@
     "timerequired": "00:01",
     "diet": "Clean Eating",
     "favoriteExercices": [
-      "a4F9Oyc"
+      "a4F9Oyc",
+      "LMGXZn8"
     ],
     "totalExercisesCompleted": 2
+  },
+  {
+    "id": 10,
+    "name": "Lecourbe",
+    "firstname": "Camille",
+    "address": "5 Rue Péligot",
+    "zipcode": "95880",
+    "city": "Enghien-les-Bains",
+    "phone": "0666666666",
+    "email": "CamillemoveUp@gmail.com",
+    "password": "$2b$10$Ey2uVNyRCGX3PAfEYkMgLOVNAd0/Hv4M59sCqDz.6k9sOmi4XZGgO",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "favoriteExercices": "trmte8s,f9lVSSI,wnEscH8,1jXLYEw,2Ryn564",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "03:00",
+    "diet": "Sans restriction",
+    "photoUrl": "/images/troy-community-1763723633180.gif"
   }
 ]
