@@ -14,5 +14,13 @@
     "rating": 1,
     "comment": "Epuisant de suivre les exercices.",
     "createdAt": "2025-11-18T13:14:51.944Z"
+  },
+  {
+    "id": 1763562872266,
+    "userId": "7",
+    "title": "Vraiment sympa",
+    "rating": 5,
+    "comment": "J'ai utilisé les 7 jours d'essai offerts pour tester, les exercices sont très facilement compréhensibles. ",
+    "createdAt": "2025-11-19T14:34:32.266Z"
   }
 ]
