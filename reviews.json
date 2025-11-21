@@ -14,5 +14,13 @@
     "rating": 1,
     "comment": "Epuisant de suivre les exercices.",
     "createdAt": "2025-11-18T13:14:51.944Z"
+  },
+  {
+    "id": 1763569757333,
+    "userId": "10",
+    "title": "MoveUp est top ! ",
+    "rating": 5,
+    "comment": "J'ai repris le sport à mon rythme et ai bénéficié des conseils d'un coach professionnel qui m'a indiqué quels exercices privilégiés. De plus il m'a construit un entraînement adapté à mon emploi du temps.",
+    "createdAt": "2025-11-19T16:29:17.333Z"
   }
 ]
