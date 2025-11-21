@@ -126,11 +126,16 @@
     "password": "$2b$10$Ey2uVNyRCGX3PAfEYkMgLOVNAd0/Hv4M59sCqDz.6k9sOmi4XZGgO",
     "usertype": "Personnel",
     "subscription": "Pro",
-    "favoriteExercices": "trmte8s,f9lVSSI,wnEscH8,1jXLYEw,2Ryn564",
     "levelexperiency": "Intermédiaire",
     "timerequired": "03:00",
     "diet": "Sans restriction",
     "photoUrl": "/images/troy-community-1763723633180.gif",
-    "totalExercisesCompleted": 1
+    "totalExercisesCompleted": 3,
+    "favoriteExercices": [
+      "LMGXZn8",
+      "a4F9Oyc",
+      "f9lVSSI",
+      "oLrKqDH"
+    ]
   }
 ]
