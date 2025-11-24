@@ -428,7 +428,7 @@
   {
     "id": 24,
     "exerciseId": "CHpahtl",
-    "nom": "Abduction de hanches assise à la machine",
+    "nom": "Abduction de hanches assis à la machine",
     "gifUrl": "https://static.exercisedb.dev/media/CHpahtl.gif",
     "muscleCible": "Abducteurs",
     "partieDuCorps": "Jambes supérieures",
@@ -760,7 +760,7 @@
   {
     "id": 41,
     "exerciseId": "f9lVSSI",
-    "nom": "Sauts écartés (homme)",
+    "nom": "Sauts écartés",
     "gifUrl": "https://static.exercisedb.dev/media/f9lVSSI.gif",
     "muscleCible": "Système cardiovasculaire",
     "partieDuCorps": "Cardio",
@@ -963,7 +963,7 @@
   {
     "id": 51,
     "exerciseId": "17bqEXD",
-    "nom": "Étirement assis du mollet (homme)",
+    "nom": "Étirement assis du mollet",
     "gifUrl": "https://static.exercisedb.dev/media/17bqEXD.gif",
     "muscleCible": "Mollets",
     "partieDuCorps": "Bas des jambes",

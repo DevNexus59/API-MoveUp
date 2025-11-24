@@ -23,6 +23,7 @@ const storage = multer.diskStorage({
   }});
 const upload = multer({ storage: storage });
 const exercices = require('./exercices.json');
+const coachs = require('./coach.json');
 const app = express();
 const PORT = 4000;
 const filePath = path.join(__dirname, 'users.json');
@@ -229,6 +230,10 @@ app.get('/api/users/:id', async (req, res) => {
       return res.status(404).send('Utilisateur non trouvé.');
     }
 
+    if (!user.planning) {
+        user.planning = [];
+    }
+
     const { password, ...userData } = user;
 
     res.status(200).json(userData);
@@ -366,7 +371,7 @@ app.post('/connexion', async (req, res) => {
   }
 });
 
-// ✅ route transmission d'information d'exercices.json
+// 🧩 route transmission d'information d'exercices.json
 app.get('/api/exercices', async (req, res) => {
   res.json({results: exercices });
 });
@@ -571,6 +576,64 @@ app.post('/api/achievements/track', async(req, res) => {
   } catch (error) {
     console.error("Erreur lors du traitement de l'exercice:", error);
     res.status(500).json({message: 'Erreur interne du serveur.', error: error.message});
+  }
+});
+
+// 🧩 Route de lecture des Coachs Favoris
+app.get('/api/coach', async (req, res) => {
+  res.json({coachs });
+});
+// 📍Routes pour le planning
+
+// 📍Renvoie les seances planifiees:
+
+app.get("/api/users/:id/planning", async (req, res) => {
+  const userId = Number(req.params.id);
+
+  try {
+    const users = await readUsers();
+    const user = users.find((u) => u.id === userId);
+
+    if (!user) {
+      return res.status(404).json({message: 'Utilisateur non trouvé.'});
+    }
+
+    if (!user.planning) {
+      user.planning = [];
+    }
+
+    res.json({ events: user.planning});
+  } catch (error) {
+    console.error("Erreur planning du get:", error);
+    res.status(500).json( {message:"Erreur serveur."});
+  }
+});
+
+// 📍Sauvegarde les seances planifiees:
+
+app.put("/api/users/:id/planning", async (req, res) => {
+  const userId = Number(req.params.id);
+  const { events } = req.body; //cela permet d'attendre le tableau events
+
+  try{
+    const users = await readUsers();
+    const userIndex = users.findIndex((u) => u.id === userId);
+
+      if (userIndex === -1) {
+      return res.status(404).json({message: 'Utilisateur non trouvé.'});
+    }
+
+    if (!Array.isArray(events)) {
+      return res.status(400).json({message:"Le format de l'event est invalide."});
+    }
+
+    users[userIndex].planning = events;
+
+    await writeUsers(users);
+    res.json({events: users[userIndex].planning});
+  } catch (error) {
+    console.error("erreur du planning put", error);
+    res.status(500).send("erreur planning");
   }
 });
 

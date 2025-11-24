@@ -21,6 +21,14 @@
       "27NNGFr",
       "a4F9Oyc",
       "f9lVSSI"
+    ],
+    "planning": [
+      {
+        "id": 1,
+        "title": "Séance JavaScript",
+        "start": "2025-11-24T10:00:00",
+        "end": "2025-11-24T11:00:00"
+      }
     ]
   },
   {
@@ -35,8 +43,40 @@
   },
   {
     "id": 4,
-    "email": "",
-    "password": "$2b$10$GhegsddKVSzfxoOvrQExA../uJGRnJSEWvuuZAkaFx2bIxN8Z75rC"
+    "email": "joachim.masson.17@gmail.com",
+    "password": "$2a$10$0Dh0gm44/zNX0KW9hoTy9uEbKe3w8P/Mxnt8WdeuWyO0dBz12Bg1e",
+    "name": "M",
+    "firstname": "Jo",
+    "phone": "0605040302",
+    "usertype": "Professionnel",
+    "levelexperiency": "Debutant",
+    "address": "",
+    "city": "",
+    "zipcode": "",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "oLrKqDH",
+      "wnEscH8",
+      "1jXLYEw"
+    ],
+    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
+    "totalExercisesCompleted": 35,
+    "favoriteCoach": [
+      "1"
+    ],
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T16:24:49.819Z",
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1
   },
   {
     "id": 5,
@@ -61,6 +101,21 @@
   },
   {
     "id": 7,
+    "name": "Pardo",
+    "firstname": "Cécile",
+    "address": "1 Rue du Ha",
+    "zipcode": "33000",
+    "city": "Bordeaux",
+    "phone": "0666666666",
+    "email": "pardo.cle@gmail.com",
+    "password": "$2b$10$jp7d4tnBeudLwG5sUhFSzOH5SW/QheTRzPh8oA99QV92ANPvx0uk2",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "diet": "Végétarien",
+    "levelexperiency": "Expert",
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg"
+    },
+  { 
     "name": "DEBAS",
     "firstname": "Romain",
     "address": "22 rue Bonjour",
@@ -124,7 +179,13 @@
     "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
     "levelexperiency": "Debutant",
     "timerequired": "00:01",
-    "diet": "Clean Eating"
+    "diet": "Clean Eating",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "a4F9Oyc",
+      "CcWEoWV"
+    ],
+    "totalExercisesCompleted": 1
   },
   {
     "id": 10,
@@ -163,12 +224,28 @@
     "timerequired": "03:00",
     "diet": "Sans restriction",
     "photoUrl": "/images/troy-community-1763723633180.gif",
-    "totalExercisesCompleted": 3,
+    "totalExercisesCompleted": 4,
     "favoriteExercices": [
       "LMGXZn8",
       "a4F9Oyc",
       "f9lVSSI",
       "oLrKqDH"
+    ],
+    "planning": [
+      {
+        "exerciseId": "ye84CTU",
+        "title": "Curl au pupitre à la machine",
+        "start": "2025-11-26T06:00:00.000Z",
+        "end": "2025-11-26T11:00:00.000Z",
+        "id": "49fab639-2e23-4db3-aa4e-3390374a3606"
+      },
+      {
+        "exerciseId": "8d8qJQI",
+        "title": "Row incliné à la barre prise inversée",
+        "start": "2025-11-27T07:00:00.000Z",
+        "end": "2025-11-27T13:30:00.000Z",
+        "id": "801e5f88-ad2b-4b1c-b746-35c7b81566b8"
+      }
     ]
   }
 ]
