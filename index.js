@@ -74,6 +74,101 @@ const writeUsers = async (users) => {
   await fs.writeFile(filePath, JSON.stringify(users, null, 2));
 };
 
+// 🎖️Fonction utilitaire pour les badges🎖️
+const readBadges = async () => {
+  try {
+    const data = await fs.readFile('badges.json', 'utf8');
+    return JSON.parse(data || '{}');
+  } catch (error) {
+    if (error.code === 'ENOENT') return {}; // Si pas de fichier, objet vide
+    throw error;
+  }
+};
+
+
+// Vérification des Achievements
+
+function checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList) {
+    const now = moment();
+    const hour = now.hour();
+    const minute = now.minute();
+
+    // Vérification de Régularité
+    if (user.lastWorkoutDate) {
+        const lastDate = moment(user.lastWorkoutDate).startOf('day');
+        const diffDays = now.startOf('day').diff(lastDate, 'days');
+
+        if (diffDays === 1) {
+            user.consecutiveDays += 1;
+        } else if (diffDays > 1) {
+            user.consecutiveDays = 1;
+        }
+    } else {
+        user.consecutiveDays = 1;
+    }
+    user.lastWorkoutDate = now.toISOString();
+
+    // Vérification Horaire
+    if (hour < 7) user.totalEarlyWorkouts = (user.totalEarlyWorkouts || 0) + 1;
+    if (hour >= 22) user.totalLateWorkouts = (user.totalLateWorkouts || 0) + 1;
+    if (minute > 10) user.timeAchieved = (user.timeAchieved || 0) + 1;
+    if (hour === 2) user.timeAchieved = (user.timeAchieved || 0) + 1;
+
+    // Vérification Diversité
+    if (!user.exercisesTried) user.exercisesTried = {};
+    if (!user.exercisesCounts) user.exercisesCounts = {};
+
+    // Mise a jour pour les badges type LOGIC
+    user.exercisesTried[exerciseData.exerciseId] = true;
+    user.exercisesCounts[exerciseData.exerciseId] = (user.exercisesCounts[exerciseData.exerciseId] || 0) +1;
+    user.exercisesTriedCount = Object.keys(user.exercisesTried).length;
+    user.maxExerciseCount = Math.max(0, ...Object.values(user.exercisesCounts));
+
+    const logicBadges = badgesList.filter(b => b.type === 'LOGIC'); 
+
+    logicBadges.forEach(badge => {
+        const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
+        let conditionMet = false;
+
+        if (badge.metric === 'exercisesTriedCount' || badge.metric === 'maxExerciseCount') {
+            conditionMet = user[badge.metric] >= badge.requiredValue;
+        } else if (user[badge.metric] !== undefined) {
+            conditionMet = user[badge.metric] >= badge.requiredValue;
+        }
+
+        if (conditionMet && !isAlreadyUnlocked) {
+            user.unlockedBadges.push(badge.id);
+            newlyUnlocked.push(badge);
+        }
+    });
+}
+
+// Controle la réalisation d'un exo, les metrics et les achievements.
+function checkAndUnlockBadges(user, exerciseData, badgesList) {
+    const newlyUnlocked = [];
+    user.totalExercisesCompleted = (user.totalExercisesCompleted || 0) +1;
+
+    if (!user.unlockedBadges) user.unlockedBadges = [];
+    if (!user.exercisesTried) user.exercisesTried = {};
+    if (!user.exercisesCounts) user.exercisesCounts = {};
+  
+
+    //Contrôle du cumul pour badges de Progression
+    badgesList.filter(b => b.type !== 'LOGIC').forEach(badge =>{
+        const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
+        const conditionMet = (user[badge.metric] || 0) >= badge.requiredValue;
+
+        if (conditionMet && !isAlreadyUnlocked) {
+            user.unlockedBadges.push(badge.id);
+            newlyUnlocked.push(badge);
+        }
+    });
+    //Contrôle des badges de type temporel et de diversité
+    checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList);
+
+    return newlyUnlocked;
+}
+
 // Route de lecture des utilisateurs
 app.get('/api/users', async (req, res) => {
   try {
@@ -122,96 +217,6 @@ app.get('/api/users/:id/favorites', async (req, res) => {
     res.status(500).send('Erreur serveur.');
   }
 });
-// 🎖️Fonction utilitaire pour les badges🎖️
-const readBadges = async () => {
-  try {
-    const data = await fs.readFile('badges.json', 'utf8');
-    return JSON.parse(data || '{}');
-  } catch (error) {
-    if (error.code === 'ENOENT') return {}; // Si pas de fichier, objet vide
-    throw error;
-  }
-};
-
-
-// Vérification des Achievements
-
-function checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList) {
-    const now = moment();
-    const hour = now.hour();
-
-    // Vérification de Régularité
-    if (user.lastWorkoutDate) {
-        const lastDate = moment(user.lastWorkoutDate).startOf('day');
-        const diffDays = now.startOf('day').diff(lastDate, 'days');
-
-        if (diffDays === 1) {
-            user.consecutiveDays += 1;
-        } else if (diffDays > 1) {
-            user.consecutiveDays = 1;
-        }
-    } else {
-        user.consecutiveDays = 1;
-    }
-    user.lastWorkoutDate = now.toISOString();
-
-    // Vérification Horaire
-    if (hour < 7) user.totalEarlyWorkouts (user.totalEarlyWorkouts || 0) += 1;
-    if (hour >= 22) user.totalLateWorkouts (user.totalLateWorkouts || 0) += 1;
-
-    // Vérification Diversité
-    if (user.exercisesTried) user.exercisesTried = {};
-    if (user.exercisesCounts) user.exercisesCounts = {};
-
-    // Mise a jour pour les badges type LOGIC
-    user.exercisesTried[exerciseData.exerciseId] = true;
-    user.exercisesCounts[exerciseData.exerciseId] = (user.exercisesCounts[exerciseData.exerciseId] || 0) +1;
-    user.exercisesTriedCount = Object.keys(user.exercisesTried).length;
-    user.maxExerciseCount = Math.max(0, ...Object.values(user.exercisesCounts));
-
-    const logicBadges = badgesList.filter(b => b.type === 'LOGIC'); 
-
-    logicBadges.forEach(badge => {
-        const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
-        let conditionMet = false;
-
-        if (badge.metric === 'exercisesTriedCount' || badge.metric === 'maxExerciseCount') {
-            conditionMet = user[badge.metric] >= badge.requiredValue;
-        } else if (user[badge.metric] !== undefined) {
-            conditionMet = user[badge.metric] >= badge.requiredValue;
-        }
-
-        if (conditionMet && !isAlreadyUnlocked) {
-            user.unlockedBadges.push(badge.id);
-            newlyUnlocked.push(badge);
-        }
-    });
-}
-
-// Controle la réalisation d'un exo, les metrics et les achievements.
-function checkAndUnlockBadges(user, exerciseData, badgesList) {
-    const newlyUnlocked = [];
-    user.totalExercisesCompleted = (user.totalExercisesCompleted || 0) +1;
-
-    if (!user.unlockedBadges) user.unlockedBadges = [];
-    if (!user.exercisesTried) user.exercisesTried = {};
-    if (!user.exercisesCounts) user.exercisesCounts = {};
-
-    //Contrôle du cumul pour badges de Progression
-    badgesList.filter(b => b.type !== 'LOGIC').forEach(badge =>{
-        const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
-        const conditionMet = (user[badge.metric] || 0) >= badge.requiredValue;
-
-        if (conditionMet && !isAlreadyUnlocked) {
-            user.unlockedBadges.push(badge.id);
-            newlyUnlocked.push(badge);
-        }
-    });
-    //Contrôle des badges de type temporel et de diversité
-    checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList);
-
-    return newlyUnlocked;
-}
 
 // 📍 NOUVELLE ROUTE : Récupérer un utilisateur par son ID
 app.get('/api/users/:id', async (req, res) => {
