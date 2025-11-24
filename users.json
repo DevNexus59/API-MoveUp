@@ -43,8 +43,40 @@
   },
   {
     "id": 4,
-    "email": "",
-    "password": "$2b$10$GhegsddKVSzfxoOvrQExA../uJGRnJSEWvuuZAkaFx2bIxN8Z75rC"
+    "email": "joachim.masson.17@gmail.com",
+    "password": "$2a$10$0Dh0gm44/zNX0KW9hoTy9uEbKe3w8P/Mxnt8WdeuWyO0dBz12Bg1e",
+    "name": "M",
+    "firstname": "Jo",
+    "phone": "0605040302",
+    "usertype": "Professionnel",
+    "levelexperiency": "Debutant",
+    "address": "",
+    "city": "",
+    "zipcode": "",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "oLrKqDH",
+      "wnEscH8",
+      "1jXLYEw"
+    ],
+    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
+    "totalExercisesCompleted": 35,
+    "favoriteCoach": [
+      "1"
+    ],
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T16:24:49.819Z",
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1
   },
   {
     "id": 5,

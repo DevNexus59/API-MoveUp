@@ -23,6 +23,7 @@ const storage = multer.diskStorage({
   }});
 const upload = multer({ storage: storage });
 const exercices = require('./exercices.json');
+const coachs = require('./coach.json');
 const app = express();
 const PORT = 4000;
 const filePath = path.join(__dirname, 'users.json');
@@ -365,7 +366,7 @@ app.post('/connexion', async (req, res) => {
   }
 });
 
-// ✅ route transmission d'information d'exercices.json
+// 🧩 route transmission d'information d'exercices.json
 app.get('/api/exercices', async (req, res) => {
   res.json({results: exercices });
 });
@@ -573,6 +574,10 @@ app.post('/api/achievements/track', async(req, res) => {
   }
 });
 
+// 🧩 Route de lecture des Coachs Favoris
+app.get('/api/coach', async (req, res) => {
+  res.json({coachs });
+});
 // 📍Routes pour le planning
 
 // 📍Renvoie les seances planifiees:
