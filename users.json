@@ -21,6 +21,14 @@
       "27NNGFr",
       "a4F9Oyc",
       "f9lVSSI"
+    ],
+    "planning": [
+      {
+        "id": 1,
+        "title": "Séance JavaScript",
+        "start": "2025-11-24T10:00:00",
+        "end": "2025-11-24T11:00:00"
+      }
     ]
   },
   {
@@ -89,7 +97,21 @@
     "levelexperiency": "Intermédiaire",
     "timerequired": "05:00",
     "diet": "Végétarien",
-    "photoUrl": "/images/IMG_4314-1763564525601.jpeg"
+    "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
+    "totalExercisesCompleted": 3,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "a4F9Oyc": true
+    },
+    "exercisesCounts": {
+      "a4F9Oyc": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-23T23:00:00.000Z",
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1
   },
   {
     "id": 9,
@@ -108,8 +130,71 @@
     "timerequired": "00:01",
     "diet": "Clean Eating",
     "favoriteExercices": [
-      "a4F9Oyc"
+      "LMGXZn8",
+      "a4F9Oyc",
+      "CcWEoWV"
     ],
     "totalExercisesCompleted": 1
+  },
+  {
+    "id": 10,
+    "name": "DUMOTIER",
+    "firstname": "Aurélie",
+    "address": "41 Avenue de Verdun",
+    "zipcode": "78290",
+    "city": "Croissy-sur-Seine",
+    "phone": "0683144424",
+    "email": "aurelie.dumotier@gmail.com",
+    "password": "$2b$10$r47AGFlcLQi0OPmTcBbcnuImTixI0d4CHg5qWOfcU38A8rMHSPw4.",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "totalExercisesCompleted": "1111111111",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "01:00",
+    "diet": "Sans restriction",
+    "photoUrl": "/images/Photo AurÃ©lie 2024 B-1763656157188.jpg",
+    "favoriteExercices": [
+      "LMGXZn8"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Lecourbe",
+    "firstname": "Camille",
+    "address": "5 Rue Péligot",
+    "zipcode": "95880",
+    "city": "Enghien-les-Bains",
+    "phone": "0666666666",
+    "email": "CamillemoveUp@gmail.com",
+    "password": "$2b$10$Ey2uVNyRCGX3PAfEYkMgLOVNAd0/Hv4M59sCqDz.6k9sOmi4XZGgO",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "03:00",
+    "diet": "Sans restriction",
+    "photoUrl": "/images/troy-community-1763723633180.gif",
+    "totalExercisesCompleted": 4,
+    "favoriteExercices": [
+      "LMGXZn8",
+      "a4F9Oyc",
+      "f9lVSSI",
+      "oLrKqDH"
+    ],
+    "planning": [
+      {
+        "exerciseId": "ye84CTU",
+        "title": "Curl au pupitre à la machine",
+        "start": "2025-11-26T06:00:00.000Z",
+        "end": "2025-11-26T11:00:00.000Z",
+        "id": "49fab639-2e23-4db3-aa4e-3390374a3606"
+      },
+      {
+        "exerciseId": "8d8qJQI",
+        "title": "Row incliné à la barre prise inversée",
+        "start": "2025-11-27T07:00:00.000Z",
+        "end": "2025-11-27T13:30:00.000Z",
+        "id": "801e5f88-ad2b-4b1c-b746-35c7b81566b8"
+      }
+    ]
   }
 ]

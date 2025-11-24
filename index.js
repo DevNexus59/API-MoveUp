@@ -125,37 +125,21 @@ app.get('/api/users/:id/favorites', async (req, res) => {
 const readBadges = async () => {
   try {
     const data = await fs.readFile('badges.json', 'utf8');
-    return JSON.parse(data || '[]');
+    return JSON.parse(data || '{}');
   } catch (error) {
-    if (error.code === 'ENOENT') return []; // Si pas de fichier, tableau vide
+    if (error.code === 'ENOENT') return {}; // Si pas de fichier, objet vide
     throw error;
   }
 };
 
-// Simulation de données utilisateurs
-
-const userProgress ={
-    'user_111': {
-        totalExercisesCompleted: 0,
-        totalEarlyWorkouts: 0,
-        totalLateWorkouts: 0,
-        consecutiveDays: 0, /* Nécessitera la création d'une archive des dates de connection */ 
-        lastWorkoutDate: null,
-        exercisesTried: {}, /* Nécessitera l'ajout d'un trigger */
-        exercisesCounts: {}, /* Nécessitera l'ajout d'un trigger */
-        unlockedBadges: []
-},
-};
 
 // Vérification des Achievements
 
 function checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList) {
     const now = moment();
     const hour = now.hour();
-    readUsers();
-    
 
-// Vérification de Régularité
+    // Vérification de Régularité
     if (user.lastWorkoutDate) {
         const lastDate = moment(user.lastWorkoutDate).startOf('day');
         const diffDays = now.startOf('day').diff(lastDate, 'days');
@@ -171,18 +155,20 @@ function checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList)
     user.lastWorkoutDate = now.toISOString();
 
     // Vérification Horaire
-    if (hour < 7) user.totalEarlyWorkouts += 1;
-    if (hour >= 22) user.totalLateWorkouts += 1;
+    if (hour < 7) user.totalEarlyWorkouts (user.totalEarlyWorkouts || 0) += 1;
+    if (hour >= 22) user.totalLateWorkouts (user.totalLateWorkouts || 0) += 1;
 
     // Vérification Diversité
-    user.exercisesTried[exerciseData.exerciseId] = true;
-    user.exercisesCounts[exerciseData.exerciseId] = (user.exercisesCounts[exerciseData.exerciseId] || 0) + 1;
+    if (user.exercisesTried) user.exercisesTried = {};
+    if (user.exercisesCounts) user.exercisesCounts = {};
 
     // Mise a jour pour les badges type LOGIC
+    user.exercisesTried[exerciseData.exerciseId] = true;
+    user.exercisesCounts[exerciseData.exerciseId] = (user.exercisesCounts[exerciseData.exerciseId] || 0) +1;
     user.exercisesTriedCount = Object.keys(user.exercisesTried).length;
     user.maxExerciseCount = Math.max(0, ...Object.values(user.exercisesCounts));
 
-    const logicBadges = badgesList.filter(b => b.type === 'LOGIC');
+    const logicBadges = badgesList.filter(b => b.type === 'LOGIC'); 
 
     logicBadges.forEach(badge => {
         const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
@@ -205,19 +191,15 @@ function checkComplexAchievements(exerciseData, newlyUnlocked, user, badgesList)
 function checkAndUnlockBadges(user, exerciseData, badgesList) {
     const newlyUnlocked = [];
     user.totalExercisesCompleted = (user.totalExercisesCompleted || 0) +1;
-    user = userProgress[user];
-    if (!user) {
-        user = userProgress[user] = {
-            totalExercisesCompleted: 0, totalEarlyWorkouts: 0, totalLateWorkouts: 0,
-            consecutiveDays: 0, lastWorkoutDate: null, exercisesTried: {}, exercisesCounts: {},
-            unlockedBadges: []
-        };
-    }
+
+    if (!user.unlockedBadges) user.unlockedBadges = [];
+    if (!user.exercisesTried) user.exercisesTried = {};
+    if (!user.exercisesCounts) user.exercisesCounts = {};
 
     //Contrôle du cumul pour badges de Progression
     badgesList.filter(b => b.type !== 'LOGIC').forEach(badge =>{
         const isAlreadyUnlocked = user.unlockedBadges.includes(badge.id);
-        const conditionMet = user[badge.metric] >= badge.requiredValue;
+        const conditionMet = (user[badge.metric] || 0) >= badge.requiredValue;
 
         if (conditionMet && !isAlreadyUnlocked) {
             user.unlockedBadges.push(badge.id);
@@ -240,6 +222,10 @@ app.get('/api/users/:id', async (req, res) => {
 
     if (!user) {
       return res.status(404).send('Utilisateur non trouvé.');
+    }
+
+    if (!user.planning) {
+        user.planning = [];
     }
 
     const { password, ...userData } = user;
@@ -539,14 +525,15 @@ app.get('/api/users/:userId/badges', async (req, res) => {
   try {
     const [users, badges] = await Promise.all([readUsers(), readBadges()]);
     
-    const user = users.find(u => u.id ===Number(req.params.userId));
+    const user = users.find(u => u.id === Number(req.params.userId));
     
     if(!user) {
       return res.status(404).json({ message: 'Utilisateur non trouvé.'});
     }
     
     // Recupérer les détails des badges
-    const unlockedDetails = (user.unlockedBadges || [].map(badgeId => badges.find(b => b.id === badgeId)).filter(Boolean));
+    const userBadgeIds = user.unlockedBadges || [];
+    const unlockedDetails = userBadgeIds.map(badgeId => badges.find(b => b.id === badgeId)).filter(Boolean);
     
     res.json(unlockedDetails);
   } catch (error) {
@@ -568,7 +555,7 @@ app.post('/api/achievements/track', async(req, res) => {
     if (userIndex === -1) {
       return res.status(404).json({message: 'Utilisteur non trouvé.'});
     }
-    
+
     const newlyUnlocked = checkAndUnlockBadges(users[userIndex], {exerciseId}, badges);
     await writeUsers(users);
     
@@ -576,12 +563,67 @@ app.post('/api/achievements/track', async(req, res) => {
       status: 'success',
       newlyUnlockedBadges : newlyUnlocked,
       userStats: {
-        totalExercises: users[userIndex].totalExercisesCompleted
+        totalExercises: users[userIndex].totalExercisesCompleted,
+        consecutiveDays: users[userIndex].consecutiveDays
       }
     });
   } catch (error) {
     console.error("Erreur lors du traitement de l'exercice:", error);
     res.status(500).json({message: 'Erreur interne du serveur.', error: error.message});
+  }
+});
+
+// 📍Routes pour le planning
+
+// 📍Renvoie les seances planifiees:
+
+app.get("/api/users/:id/planning", async (req, res) => {
+  const userId = Number(req.params.id);
+
+  try {
+    const users = await readUsers();
+    const user = users.find((u) => u.id === userId);
+
+    if (!user) {
+      return res.status(404).json({message: 'Utilisateur non trouvé.'});
+    }
+
+    if (!user.planning) {
+      user.planning = [];
+    }
+
+    res.json({ events: user.planning});
+  } catch (error) {
+    console.error("Erreur planning du get:", error);
+    res.status(500).json( {message:"Erreur serveur."});
+  }
+});
+
+// 📍Sauvegarde les seances planifiees:
+
+app.put("/api/users/:id/planning", async (req, res) => {
+  const userId = Number(req.params.id);
+  const { events } = req.body; //cela permet d'attendre le tableau events
+
+  try{
+    const users = await readUsers();
+    const userIndex = users.findIndex((u) => u.id === userId);
+
+      if (userIndex === -1) {
+      return res.status(404).json({message: 'Utilisateur non trouvé.'});
+    }
+
+    if (!Array.isArray(events)) {
+      return res.status(400).json({message:"Le format de l'event est invalide."});
+    }
+
+    users[userIndex].planning = events;
+
+    await writeUsers(users);
+    res.json({events: users[userIndex].planning});
+  } catch (error) {
+    console.error("erreur du planning put", error);
+    res.status(500).send("erreur planning");
   }
 });
 
