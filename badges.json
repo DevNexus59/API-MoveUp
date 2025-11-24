@@ -1,0 +1,80 @@
+
+[
+    {
+        "id": "prog_pas", 
+        "name": "Premier Pas",
+        "metric": "totalExercisesCompleted", 
+        "requiredValue": 1,
+        "icon": "http://localhost:4000/images/iconesBadges/baby.png"
+    },
+    {
+        "id": "prog_assidu",
+        "name": "Assidu",
+        "metric": "totalExercisesCompleted",
+        "requiredValue": 50,
+        "icon": "http://localhost:4000/images/iconesBadges/clock.png"
+    },
+    {
+        "id": "prog_heros",
+        "name": "Heros",
+        "metric": "totalExercisesCompleted",
+        "requiredValue": 100,
+        "icon": "http://localhost:4000/images/iconesBadges/biceps.png"
+    },
+    {
+        "id": "reg_sem_parf",
+        "name": "Semaine Parfaite",
+        "metric": "consecutiveDays",
+        "requiredValue": 7,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/week.png"
+    },
+    {
+        "id": "reg_mois_parf",
+        "name": "Mois Parfait",
+        "metric": "consecutiveDays",
+        "requiredValue": 30,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/month.png"
+    },
+    {
+        "id": "reg_leve_tot",
+        "name": "Lève tôt",
+        "metric": "totalEarlyWorkouts",
+        "requiredValue": 10,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/day.png"
+    },
+    {
+        "id": "reg_noctambule",
+        "name": "Noctambule",
+        "metric": "totalLateWorkouts",
+        "requiredValue": 10,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/night.png"
+    },
+    {
+        "id": "spec_touche",
+        "name": "Touche à tout",
+        "metric": "exercisesTriedCount",
+        "requiredValue": 5,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/discover.png"
+    },
+    {
+        "id": "spec_explor",
+        "name": "Explorateur",
+        "metric": "exercisesTriedCount",
+        "requiredValue": 10,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/binoculars.png"
+    },
+    {
+        "id": "spec_spec",
+        "name": "Spécialiste",
+        "metric": "maxExerciseCount",
+        "requiredValue": 50,
+        "type": "LOGIC",
+        "icon": "http://localhost:4000/images/iconesBadges/weights.png"
+    }
+]
