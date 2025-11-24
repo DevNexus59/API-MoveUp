@@ -69,6 +69,21 @@
   },
   {
     "id": 7,
+    "name": "Pardo",
+    "firstname": "Cécile",
+    "address": "1 Rue du Ha",
+    "zipcode": "33000",
+    "city": "Bordeaux",
+    "phone": "0666666666",
+    "email": "pardo.cle@gmail.com",
+    "password": "$2b$10$jp7d4tnBeudLwG5sUhFSzOH5SW/QheTRzPh8oA99QV92ANPvx0uk2",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "diet": "Végétarien",
+    "levelexperiency": "Expert",
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg"
+    },
+  { 
     "name": "DEBAS",
     "firstname": "Romain",
     "address": "22 rue Bonjour",
