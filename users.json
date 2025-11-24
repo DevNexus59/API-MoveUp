@@ -46,13 +46,14 @@
     "city": "",
     "zipcode": "",
     "favoriteExercices": [
-      "H1PESYI",
-      "trmte8s",
-      "a4F9Oyc",
-      "LMGXZn8"
+      "LMGXZn8",
+      "oLrKqDH",
+      "wnEscH8",
+      "1jXLYEw"
     ],
     "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
-    "totalExercisesCompleted": 31
+    "totalExercisesCompleted": 34,
+    "favoriteCoach": ["1"]
   },
   {
     "id": 5,
