@@ -60,8 +60,23 @@
       "1jXLYEw"
     ],
     "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
-    "totalExercisesCompleted": 34,
-    "favoriteCoach": ["1"]
+    "totalExercisesCompleted": 35,
+    "favoriteCoach": [
+      "1"
+    ],
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T16:24:49.819Z",
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1
   },
   {
     "id": 5,
