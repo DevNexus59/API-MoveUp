@@ -82,7 +82,21 @@
     "levelexperiency": "Intermédiaire",
     "timerequired": "05:00",
     "diet": "Végétarien",
-    "photoUrl": "/images/IMG_4314-1763564525601.jpeg"
+    "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
+    "totalExercisesCompleted": 3,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "a4F9Oyc": true
+    },
+    "exercisesCounts": {
+      "a4F9Oyc": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-23T23:00:00.000Z",
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1
   },
   {
     "id": 9,
