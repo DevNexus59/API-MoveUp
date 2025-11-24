@@ -17,7 +17,6 @@
     "subscription": "Pro",
     "photoUrl": "/images/profile-pic-1763464838018.png",
     "favoriteExercices": [
-      "LMGXZn8",
       "27NNGFr",
       "a4F9Oyc",
       "f9lVSSI"
@@ -77,11 +76,6 @@
     "lastWorkoutDate": "2025-11-24T16:24:49.819Z",
     "exercisesTriedCount": 1,
     "maxExerciseCount": 1
-  },
-  {
-    "id": 5,
-    "email": "doe.john@gmail.com",
-    "password": "$2b$10$fU7OH6KHqV8Sy288CwbhY.agKJQA9oO7HzdvpOJ0wPG5Tw1OsnaoC"
   },
   {
     "id": 6,
