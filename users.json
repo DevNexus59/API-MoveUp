@@ -87,8 +87,8 @@
     "email": "harmajabbmoveUp@gmail.com",
     "password": "$2b$10$4TJmpxFva6Yj7PODKtJYH.vOSY.ESVppt.aCvO8KITcNpjEKXdDEi",
     "usertype": "Personnel",
-<<<<<<< HEAD
-    "subscription": "Premium"
+    "subscription": "Premium",
+    "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg"
   },
   {
     "id": 10,
@@ -102,24 +102,15 @@
     "password": "$2b$10$r47AGFlcLQi0OPmTcBbcnuImTixI0d4CHg5qWOfcU38A8rMHSPw4.",
     "usertype": "Personnel",
     "subscription": "Pro",
-    "totalExercisesCompleted": "111111111",
+    "totalExercisesCompleted": "11111111111",
     "levelexperiency": "Intermédiaire",
     "timerequired": "01:00",
     "diet": "Sans restriction",
     "photoUrl": "/images/Photo AurÃ©lie 2024 B-1763656157188.jpg",
     "favoriteExercices": [
-      "LMGXZn8"
+      "LMGXZn8",
+      "27NNGFr",
+      "oLrKqDH"
     ]
-=======
-    "subscription": "Premium",
-    "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
-    "levelexperiency": "Debutant",
-    "timerequired": "00:01",
-    "diet": "Clean Eating",
-    "favoriteExercices": [
-      "a4F9Oyc"
-    ],
-    "totalExercisesCompleted": 1
->>>>>>> 434d52796a7aecdea1a87544c518d52382d72090
   }
 ]
