@@ -8,12 +8,20 @@
     "createdAt": "2025-11-18T10:47:48.853Z"
   },
   {
-    "id": 1763471691944,
-    "userId": "1",
-    "title": "Pas terrible",
-    "rating": 1,
-    "comment": "Epuisant de suivre les exercices.",
-    "createdAt": "2025-11-18T13:14:51.944Z"
+    "id": 1763569757333,
+    "userId": "10",
+    "title": "MoveUp est top ! ",
+    "rating": 5,
+    "comment": "J'ai repris le sport à mon rythme et ai bénéficié des conseils d'un coach professionnel qui m'a indiqué quels exercices privilégiés. De plus il m'a construit un entraînement adapté à mon emploi du temps.",
+    "createdAt": "2025-11-19T16:29:17.333Z"
+  },
+  {
+    "id": 1763564122596,
+    "userId": "9",
+    "title": "j'ai mal aux bras",
+    "rating": 4,
+    "comment": "entraînement assez intense, je ne sens plus mes bras. C'est d'une violence sans nom mais je suis assez maso pour dire que j'adore faire du sport et soulever les haltères allez let's go les gars !!!!",
+    "createdAt": "2025-11-19T14:55:22.596Z"
   },
   {
     "id": 1763564369062,
@@ -22,5 +30,13 @@
     "rating": 5,
     "comment": "Ce site m’a fait passer de sportif du frigo à vrai humain musclé. Les séances sont top, les coachs motivent bien et mon canapé est officiellement jaloux. Je recommande ! 💪😆",
     "createdAt": "2025-11-19T14:59:29.062Z"
+  },
+  {
+    "id": 1763734421936,
+    "userId": "11",
+    "title": "J'adore !!",
+    "rating": 5,
+    "comment": "Je recommande, une application ultra flexible, motivante et parfaite pour ceux qui n'ont pas d'horaires fixes !",
+    "createdAt": "2025-11-21T14:13:41.936Z"
   }
 ]
