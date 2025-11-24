@@ -75,20 +75,39 @@
     "timerequired": "05:00",
     "diet": "Végétarien",
     "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
-    "totalExercisesCompleted": 3,
+    "totalExercisesCompleted": 61,
     "unlockedBadges": [
-      "prog_pas"
+      "prog_pas",
+      "prog_assidu",
+      "spec_touche"
     ],
     "exercisesTried": {
-      "a4F9Oyc": true
+      "a4F9Oyc": true,
+      "trmte8s": true,
+      "x6KpKpq": true,
+      "1jXLYEw": true,
+      "27NNGFr": true,
+      "LMGXZn8": true
     },
     "exercisesCounts": {
-      "a4F9Oyc": 1
+      "a4F9Oyc": 3,
+      "trmte8s": 1,
+      "x6KpKpq": 2,
+      "1jXLYEw": 1,
+      "27NNGFr": 1,
+      "LMGXZn8": 1
     },
     "consecutiveDays": 1,
     "lastWorkoutDate": "2025-11-23T23:00:00.000Z",
-    "exercisesTriedCount": 1,
-    "maxExerciseCount": 1
+    "exercisesTriedCount": 6,
+    "maxExerciseCount": 3,
+    "favoriteExercices": [
+      "a4F9Oyc",
+      "f9lVSSI",
+      "x6KpKpq",
+      "1jXLYEw",
+      "trmte8s"
+    ]
   },
   {
     "id": 9,
