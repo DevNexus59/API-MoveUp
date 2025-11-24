@@ -30,5 +30,13 @@
     "rating": 5,
     "comment": "Ce site m’a fait passer de sportif du frigo à vrai humain musclé. Les séances sont top, les coachs motivent bien et mon canapé est officiellement jaloux. Je recommande ! 💪😆",
     "createdAt": "2025-11-19T14:59:29.062Z"
+  },
+  {
+    "id": 1763734421936,
+    "userId": "11",
+    "title": "J'adore !!",
+    "rating": 5,
+    "comment": "Je recommande, une application ultra flexible, motivante et parfaite pour ceux qui n'ont pas d'horaires fixes !",
+    "createdAt": "2025-11-21T14:13:41.936Z"
   }
 ]
