@@ -17,11 +17,36 @@
     "subscription": "Pro",
     "photoUrl": "/images/profile-pic-1763464838018.png",
     "favoriteExercices": [
-      "LMGXZn8",
       "27NNGFr",
-      "a4F9Oyc",
-      "f9lVSSI"
-    ]
+      "f9lVSSI",
+      "a4F9Oyc"
+    ],
+    "planning": [
+      {
+        "id": 1,
+        "title": "Séance JavaScript",
+        "start": "2025-11-24T10:00:00",
+        "end": "2025-11-24T11:00:00"
+      }
+    ],
+    "totalExercisesCompleted": 2,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true,
+      "a4F9Oyc": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1,
+      "a4F9Oyc": 1
+    },
+    "consecutiveDays": 2,
+    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
+    "totalLateWorkouts": 1,
+    "timeAchieved": 2,
+    "exercisesTriedCount": 2,
+    "maxExerciseCount": 1
   },
   {
     "id": 2,
@@ -35,13 +60,40 @@
   },
   {
     "id": 4,
-    "email": "",
-    "password": "$2b$10$GhegsddKVSzfxoOvrQExA../uJGRnJSEWvuuZAkaFx2bIxN8Z75rC"
-  },
-  {
-    "id": 5,
-    "email": "doe.john@gmail.com",
-    "password": "$2b$10$fU7OH6KHqV8Sy288CwbhY.agKJQA9oO7HzdvpOJ0wPG5Tw1OsnaoC"
+    "email": "joachim.masson.17@gmail.com",
+    "password": "$2a$10$0Dh0gm44/zNX0KW9hoTy9uEbKe3w8P/Mxnt8WdeuWyO0dBz12Bg1e",
+    "name": "M",
+    "firstname": "Jo",
+    "phone": "0605040302",
+    "usertype": "Professionnel",
+    "levelexperiency": "Debutant",
+    "address": "",
+    "city": "",
+    "zipcode": "",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "oLrKqDH",
+      "wnEscH8",
+      "1jXLYEw"
+    ],
+    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
+    "totalExercisesCompleted": 35,
+    "favoriteCoach": [
+      "1"
+    ],
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T16:24:49.819Z",
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1
   },
   {
     "id": 6,
@@ -61,6 +113,21 @@
   },
   {
     "id": 7,
+    "name": "Pardo",
+    "firstname": "Cécile",
+    "address": "1 Rue du Ha",
+    "zipcode": "33000",
+    "city": "Bordeaux",
+    "phone": "0666666666",
+    "email": "pardo.cle@gmail.com",
+    "password": "$2b$10$jp7d4tnBeudLwG5sUhFSzOH5SW/QheTRzPh8oA99QV92ANPvx0uk2",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "diet": "Végétarien",
+    "levelexperiency": "Expert",
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg"
+  },
+  {
     "name": "DEBAS",
     "firstname": "Romain",
     "address": "22 rue Bonjour",
@@ -74,7 +141,41 @@
     "levelexperiency": "Intermédiaire",
     "timerequired": "05:00",
     "diet": "Végétarien",
-    "photoUrl": "/images/IMG_4314-1763564525601.jpeg"
+    "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
+    "totalExercisesCompleted": 61,
+    "unlockedBadges": [
+      "prog_pas",
+      "prog_assidu",
+      "spec_touche"
+    ],
+    "exercisesTried": {
+      "a4F9Oyc": true,
+      "trmte8s": true,
+      "x6KpKpq": true,
+      "1jXLYEw": true,
+      "27NNGFr": true,
+      "LMGXZn8": true
+    },
+    "exercisesCounts": {
+      "a4F9Oyc": 3,
+      "trmte8s": 1,
+      "x6KpKpq": 2,
+      "1jXLYEw": 1,
+      "27NNGFr": 1,
+      "LMGXZn8": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-23T23:00:00.000Z",
+    "exercisesTriedCount": 6,
+    "maxExerciseCount": 3,
+    "favoriteExercices": [
+      "a4F9Oyc",
+      "f9lVSSI",
+      "x6KpKpq",
+      "1jXLYEw",
+      "trmte8s"
+    ],
+    "id": 0
   },
   {
     "id": 9,
@@ -91,7 +192,13 @@
     "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
     "levelexperiency": "Debutant",
     "timerequired": "00:01",
-    "diet": "Clean Eating"
+    "diet": "Clean Eating",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "a4F9Oyc",
+      "CcWEoWV"
+    ],
+    "totalExercisesCompleted": 1
   },
   {
     "id": 10,
@@ -135,12 +242,28 @@
     "timerequired": "03:00",
     "diet": "Sans restriction",
     "photoUrl": "/images/troy-community-1763723633180.gif",
-    "totalExercisesCompleted": 3,
+    "totalExercisesCompleted": 4,
     "favoriteExercices": [
       "LMGXZn8",
       "a4F9Oyc",
       "f9lVSSI",
       "oLrKqDH"
+    ],
+    "planning": [
+      {
+        "exerciseId": "ye84CTU",
+        "title": "Curl au pupitre à la machine",
+        "start": "2025-11-26T06:00:00.000Z",
+        "end": "2025-11-26T11:00:00.000Z",
+        "id": "49fab639-2e23-4db3-aa4e-3390374a3606"
+      },
+      {
+        "exerciseId": "8d8qJQI",
+        "title": "Row incliné à la barre prise inversée",
+        "start": "2025-11-27T07:00:00.000Z",
+        "end": "2025-11-27T13:30:00.000Z",
+        "id": "801e5f88-ad2b-4b1c-b746-35c7b81566b8"
+      }
     ]
   }
 ]

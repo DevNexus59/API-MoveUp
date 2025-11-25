@@ -1,5 +1,6 @@
 # Fichiers d'environnement
 .env
+.DS_Store
 
 # Dépendances Node.js (qu'on n'envoie jamais)
 node_modules
