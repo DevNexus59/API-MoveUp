@@ -17,10 +17,9 @@
     "subscription": "Pro",
     "photoUrl": "/images/profile-pic-1763464838018.png",
     "favoriteExercices": [
-      "LMGXZn8",
       "27NNGFr",
-      "a4F9Oyc",
-      "f9lVSSI"
+      "f9lVSSI",
+      "a4F9Oyc"
     ],
     "planning": [
       {
@@ -29,7 +28,25 @@
         "start": "2025-11-24T10:00:00",
         "end": "2025-11-24T11:00:00"
       }
-    ]
+    ],
+    "totalExercisesCompleted": 2,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true,
+      "a4F9Oyc": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1,
+      "a4F9Oyc": 1
+    },
+    "consecutiveDays": 2,
+    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
+    "totalLateWorkouts": 1,
+    "timeAchieved": 2,
+    "exercisesTriedCount": 2,
+    "maxExerciseCount": 1
   },
   {
     "id": 2,
@@ -79,11 +96,6 @@
     "maxExerciseCount": 1
   },
   {
-    "id": 5,
-    "email": "doe.john@gmail.com",
-    "password": "$2b$10$fU7OH6KHqV8Sy288CwbhY.agKJQA9oO7HzdvpOJ0wPG5Tw1OsnaoC"
-  },
-  {
     "id": 6,
     "name": "michu",
     "firstname": "mireille",
@@ -113,6 +125,7 @@
     "subscription": "Pro",
     "diet": "Végétarien",
     "levelexperiency": "Expert",
+<<<<<<< HEAD:users.json
     "photoUrl": "/images/DSC_1373-1763564336005.jpg",
     "totalExercisesCompleted": 1,
     "unlockedBadges": [
@@ -130,6 +143,9 @@
     "exercisesTriedCount": 1,
     "maxExerciseCount": 1,
     "favoriteExercices": []
+=======
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg"
+>>>>>>> main:data/users.json
   },
   {
     "name": "DEBAS",
@@ -179,10 +195,14 @@
     "favoriteExercices": [
       "trmte8s"
     ],
+<<<<<<< HEAD:users.json
     "id": 8,
     "totalEarlyWorkouts": 0,
     "totalLateWorkouts": 0,
     "timeAchieved": 68
+=======
+    "id": 0
+>>>>>>> main:data/users.json
   },
   {
     "id": 9,
