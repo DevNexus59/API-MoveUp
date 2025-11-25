@@ -18,8 +18,8 @@
     "photoUrl": "/images/profile-pic-1763464838018.png",
     "favoriteExercices": [
       "27NNGFr",
-      "a4F9Oyc",
-      "f9lVSSI"
+      "f9lVSSI",
+      "a4F9Oyc"
     ],
     "planning": [
       {
@@ -29,21 +29,23 @@
         "end": "2025-11-24T11:00:00"
       }
     ],
-    "totalExercisesCompleted": 1,
+    "totalExercisesCompleted": 2,
     "unlockedBadges": [
       "prog_pas"
     ],
     "exercisesTried": {
-      "trmte8s": true
+      "trmte8s": true,
+      "a4F9Oyc": true
     },
     "exercisesCounts": {
-      "trmte8s": 1
+      "trmte8s": 1,
+      "a4F9Oyc": 1
     },
-    "consecutiveDays": 1,
-    "lastWorkoutDate": "2025-11-24T22:51:46.361Z",
+    "consecutiveDays": 2,
+    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
     "totalLateWorkouts": 1,
-    "timeAchieved": 1,
-    "exercisesTriedCount": 1,
+    "timeAchieved": 2,
+    "exercisesTriedCount": 2,
     "maxExerciseCount": 1
   },
   {
