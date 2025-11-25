@@ -117,9 +117,19 @@
     "favoriteExercices": [
       "LMGXZn8",
       "a4F9Oyc",
-      "CcWEoWV"
+      "CcWEoWV",
+      "27NNGFr"
     ],
-    "totalExercisesCompleted": 1
+    "totalExercisesCompleted": 1,
+    "planning": [
+      {
+        "exerciseId": "",
+        "title": "Haussement d'épaules avec bande",
+        "start": "2025-11-26T04:30:00.000Z",
+        "end": "2025-11-26T09:00:00.000Z",
+        "id": "e5adbc54-391a-4052-8f2d-7edc7baf82e4"
+      }
+    ]
   },
   {
     "id": 10,
