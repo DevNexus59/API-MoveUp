@@ -113,9 +113,25 @@
     "subscription": "Pro",
     "diet": "Végétarien",
     "levelexperiency": "Expert",
-    "photoUrl": "/images/DSC_1373-1763564336005.jpg"
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg",
+    "totalExercisesCompleted": 1,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "27NNGFr": true
     },
-  { 
+    "exercisesCounts": {
+      "27NNGFr": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T17:25:57.213Z",
+    "timeAchieved": 1,
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1,
+    "favoriteExercices": []
+  },
+  {
     "name": "DEBAS",
     "firstname": "Romain",
     "address": "22 rue Bonjour",
@@ -130,11 +146,13 @@
     "timerequired": "05:00",
     "diet": "Végétarien",
     "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
-    "totalExercisesCompleted": 61,
+    "totalExercisesCompleted": 154,
     "unlockedBadges": [
       "prog_pas",
       "prog_assidu",
-      "spec_touche"
+      "spec_touche",
+      "spec_10min",
+      "prog_heros"
     ],
     "exercisesTried": {
       "a4F9Oyc": true,
@@ -142,27 +160,29 @@
       "x6KpKpq": true,
       "1jXLYEw": true,
       "27NNGFr": true,
-      "LMGXZn8": true
+      "LMGXZn8": true,
+      "f9lVSSI": true
     },
     "exercisesCounts": {
       "a4F9Oyc": 3,
-      "trmte8s": 1,
+      "trmte8s": 42,
       "x6KpKpq": 2,
-      "1jXLYEw": 1,
+      "1jXLYEw": 2,
       "27NNGFr": 1,
-      "LMGXZn8": 1
+      "LMGXZn8": 6,
+      "f9lVSSI": 1
     },
-    "consecutiveDays": 1,
-    "lastWorkoutDate": "2025-11-23T23:00:00.000Z",
-    "exercisesTriedCount": 6,
-    "maxExerciseCount": 3,
+    "consecutiveDays": 2,
+    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
+    "exercisesTriedCount": 7,
+    "maxExerciseCount": 42,
     "favoriteExercices": [
-      "a4F9Oyc",
-      "f9lVSSI",
-      "x6KpKpq",
-      "1jXLYEw",
       "trmte8s"
-    ]
+    ],
+    "id": 8,
+    "totalEarlyWorkouts": 0,
+    "totalLateWorkouts": 0,
+    "timeAchieved": 68
   },
   {
     "id": 9,

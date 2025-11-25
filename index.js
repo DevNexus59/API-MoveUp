@@ -549,18 +549,31 @@ app.get('/api/users/:userId/badges', async (req, res) => {
 
 // 📍Enregistre la réalisation des exos
 app.post('/api/achievements/track', async(req, res) => {
-  const {userId, exerciseId} = req.body;
+  const {userId, exerciseId, duration} = req.body;
   
-  if (!userId || !exerciseId) {
-    return res.status(400).json({message: 'Donnée manquantes: userID et exerciseId sont requis.'});
+  if (!userId || !exerciseId || duration === undefined) {
+    return res.status(400).json({message: 'Donnees manquantes.'});
   }
   
   try {
     const [users, badges] = await Promise.all([readUsers(), readBadges()]);
-    const userIndex = users.findIndex(u=> u.id === Number(userId));
+    const userIdNumber = Number(userId);
+    const userIndex = users.findIndex(u=> u.id === userIdNumber);
     if (userIndex === -1) {
       return res.status(404).json({message: 'Utilisteur non trouvé.'});
     }
+
+    const user = users[userIndex];
+      if (!user.unlockedBadges) user.unlockedBadges = [];
+      if (!user.totalExercisesCompleted) user.totalExercisesCompleted = 0;
+      if (!user.totalEarlyWorkouts) user.totalEarlyWorkouts = 0;
+      if (!user.totalLateWorkouts) user.totalLateWorkouts = 0;
+      if (!user.consecutiveDays) user.consecutiveDays = 0;
+      if (!user.exercisesCounts) user.exercisesCounts = {};
+      if (!user.timeAchieved) user.timeAchieved = 0;
+
+      user.timeAchieved = (user.timeAchieved || 0) + Number(duration);
+      user.totalExercisesCompleted = (user.totalExercisesCompleted || 0) + 1;
 
     const newlyUnlocked = checkAndUnlockBadges(users[userIndex], {exerciseId}, badges);
     await writeUsers(users);
@@ -570,7 +583,10 @@ app.post('/api/achievements/track', async(req, res) => {
       newlyUnlockedBadges : newlyUnlocked,
       userStats: {
         totalExercises: users[userIndex].totalExercisesCompleted,
-        consecutiveDays: users[userIndex].consecutiveDays
+        consecutiveDays: users[userIndex].consecutiveDays,
+        timeAchieved: users[userIndex].timeAchieved,
+        totalEarlyWorkouts: users[userIndex].totalEarlyWorkouts,
+        totalLateWorkouts: users[userIndex].totalLateWorkouts
       }
     });
   } catch (error) {
