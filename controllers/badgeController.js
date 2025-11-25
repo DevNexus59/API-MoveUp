@@ -93,84 +93,52 @@ function checkAndUnlockBadges(user, exerciseData, badgesList) {
 }
 
 export const trackAchievements =async (req, res) => {
-
-    const { userId, exerciseId } = req.body;
-
-
-
-    if (!userId || !exerciseId) {
-
-        return res
-
-            .status(400)
-
-            .json({
-
-                message: "Donnée manquantes: userID et exerciseId sont requis.",
-
-            });
-
+  const {userId, exerciseId, duration} = req.body;
+  
+  if (!userId || !exerciseId || duration === undefined) {
+    return res.status(400).json({message: 'Donnees manquantes.'});
+  }
+  
+  try {
+    const [users, badges] = await Promise.all([readUsers(), readBadges()]);
+    const userIdNumber = Number(userId);
+    const userIndex = users.findIndex(u=> u.id === userIdNumber);
+    if (userIndex === -1) {
+      return res.status(404).json({message: 'Utilisteur non trouvé.'});
     }
 
+    const user = users[userIndex];
+      if (!user.unlockedBadges) user.unlockedBadges = [];
+      if (!user.totalExercisesCompleted) user.totalExercisesCompleted = 0;
+      if (!user.totalEarlyWorkouts) user.totalEarlyWorkouts = 0;
+      if (!user.totalLateWorkouts) user.totalLateWorkouts = 0;
+      if (!user.consecutiveDays) user.consecutiveDays = 0;
+      if (!user.exercisesCounts) user.exercisesCounts = {};
+      if (!user.timeAchieved) user.timeAchieved = 0;
 
+      user.timeAchieved = (user.timeAchieved || 0) + Number(duration);
+      user.totalExercisesCompleted = (user.totalExercisesCompleted || 0) + 1;
 
-    try {
+    const newlyUnlocked = checkAndUnlockBadges(users[userIndex], {exerciseId}, badges);
+    await writeUsers(users);
+    
+    res.json({
+      status: 'success',
+      newlyUnlockedBadges : newlyUnlocked,
+      userStats: {
+        totalExercises: users[userIndex].totalExercisesCompleted,
+        consecutiveDays: users[userIndex].consecutiveDays,
+        timeAchieved: users[userIndex].timeAchieved,
+        totalEarlyWorkouts: users[userIndex].totalEarlyWorkouts,
+        totalLateWorkouts: users[userIndex].totalLateWorkouts
+      }
+    });
+  } catch (error) {
+    console.error("Erreur lors du traitement de l'exercice:", error);
+    res.status(500).json({message: 'Erreur interne du serveur.', error: error.message});
+  }
+};
 
-        const [users, badges] = await Promise.all([readUsers(), readBadges()]);
-
-        const userIndex = users.findIndex((u) => u.id === Number(userId));
-
-        if (userIndex === -1) {
-
-            return res.status(404).json({ message: "Utilisteur non trouvé." });
-
-        }
-
-
-
-        const newlyUnlocked = checkAndUnlockBadges(
-
-            users[userIndex],
-
-            { exerciseId },
-
-            badges,
-
-        );
-
-        await writeUsers(users);
-
-
-
-        res.json({
-
-            status: "success",
-
-            newlyUnlockedBadges: newlyUnlocked,
-
-            userStats: {
-
-                totalExercises: users[userIndex].totalExercisesCompleted,
-
-                consecutiveDays: users[userIndex].consecutiveDays,
-
-            },
-
-        });
-
-    } catch (error) {
-
-        console.error("Erreur lors du traitement de l'exercice:", error);
-
-        res
-
-            .status(500)
-
-            .json({ message: "Erreur interne du serveur.", error: error.message });
-
-    }
-
-}
 export const getAllBadges = async (req, res) => {try {
     const badges = await readBadges();
     res.json(badges);
