@@ -2,7 +2,7 @@
   {
     "id": 1,
     "email": "fourdin.pfmg@gmail.com",
-    "password": "$2b$10$L3LBzArTpb97ZOql5A5DHupQhxRCzo0xan3nEnquTWI.VwvrELVaG",
+    "password": "$2b$10$1NZ96GFWsykulepRl5LHLuLDDBUZtjG/Y/iVEh00HZA0mTIbmyV7K",
     "name": "Fourdin",
     "firstname": "Pierre",
     "Address": "113 rue jean jaurès",
@@ -16,11 +16,7 @@
     "timerequired": "01:00",
     "subscription": "Pro",
     "photoUrl": "/images/profile-pic-1763464838018.png",
-    "favoriteExercices": [
-      "27NNGFr",
-      "f9lVSSI",
-      "a4F9Oyc"
-    ],
+    "favoriteExercices": [],
     "planning": [
       {
         "id": 1,
@@ -29,7 +25,7 @@
         "end": "2025-11-24T11:00:00"
       }
     ],
-    "totalExercisesCompleted": 2,
+    "totalExercisesCompleted": 4,
     "unlockedBadges": [
       "prog_pas"
     ],
@@ -39,14 +35,14 @@
     },
     "exercisesCounts": {
       "trmte8s": 1,
-      "a4F9Oyc": 1
+      "a4F9Oyc": 3
     },
-    "consecutiveDays": 2,
-    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
+    "consecutiveDays": 3,
+    "lastWorkoutDate": "2025-11-25T23:00:00.000Z",
     "totalLateWorkouts": 1,
-    "timeAchieved": 2,
+    "timeAchieved": 4,
     "exercisesTriedCount": 2,
-    "maxExerciseCount": 1
+    "maxExerciseCount": 3
   },
   {
     "id": 2,
@@ -77,7 +73,7 @@
       "1jXLYEw"
     ],
     "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
-    "totalExercisesCompleted": 35,
+    "totalExercisesCompleted": 37,
     "favoriteCoach": [
       "1"
     ],
@@ -85,15 +81,17 @@
       "prog_pas"
     ],
     "exercisesTried": {
-      "trmte8s": true
+      "trmte8s": true,
+      "wnEscH8": true
     },
     "exercisesCounts": {
-      "trmte8s": 1
+      "trmte8s": 2,
+      "wnEscH8": 1
     },
-    "consecutiveDays": 1,
-    "lastWorkoutDate": "2025-11-24T16:24:49.819Z",
-    "exercisesTriedCount": 1,
-    "maxExerciseCount": 1
+    "consecutiveDays": 3,
+    "lastWorkoutDate": "2025-11-25T23:00:00.000Z",
+    "exercisesTriedCount": 2,
+    "maxExerciseCount": 2
   },
   {
     "id": 6,
@@ -125,7 +123,23 @@
     "subscription": "Pro",
     "diet": "Végétarien",
     "levelexperiency": "Expert",
-    "photoUrl": "/images/DSC_1373-1763564336005.jpg"
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg",
+    "totalExercisesCompleted": 1,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "27NNGFr": true
+    },
+    "exercisesCounts": {
+      "27NNGFr": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T17:25:57.213Z",
+    "timeAchieved": 1,
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1,
+    "favoriteExercices": []
   },
   {
     "name": "DEBAS",
@@ -142,11 +156,13 @@
     "timerequired": "05:00",
     "diet": "Végétarien",
     "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
-    "totalExercisesCompleted": 61,
+    "totalExercisesCompleted": 154,
     "unlockedBadges": [
       "prog_pas",
       "prog_assidu",
-      "spec_touche"
+      "spec_touche",
+      "spec_10min",
+      "prog_heros"
     ],
     "exercisesTried": {
       "a4F9Oyc": true,
@@ -154,28 +170,29 @@
       "x6KpKpq": true,
       "1jXLYEw": true,
       "27NNGFr": true,
-      "LMGXZn8": true
+      "LMGXZn8": true,
+      "f9lVSSI": true
     },
     "exercisesCounts": {
       "a4F9Oyc": 3,
-      "trmte8s": 1,
+      "trmte8s": 42,
       "x6KpKpq": 2,
-      "1jXLYEw": 1,
+      "1jXLYEw": 2,
       "27NNGFr": 1,
-      "LMGXZn8": 1
+      "LMGXZn8": 6,
+      "f9lVSSI": 1
     },
-    "consecutiveDays": 1,
-    "lastWorkoutDate": "2025-11-23T23:00:00.000Z",
-    "exercisesTriedCount": 6,
-    "maxExerciseCount": 3,
+    "consecutiveDays": 2,
+    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
+    "exercisesTriedCount": 7,
+    "maxExerciseCount": 42,
     "favoriteExercices": [
-      "a4F9Oyc",
-      "f9lVSSI",
-      "x6KpKpq",
-      "1jXLYEw",
       "trmte8s"
     ],
-    "id": 0
+    "id": 8,
+    "totalEarlyWorkouts": 0,
+    "totalLateWorkouts": 0,
+    "timeAchieved": 68
   },
   {
     "id": 9,
