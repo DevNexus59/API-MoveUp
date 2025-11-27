@@ -11,6 +11,7 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
+import cookieParser from "cookie-parser";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,9 +19,16 @@ const app = express();
 const PORT = 4000;
 
 // --- Middlewares ---
-app.use(cors());
+app.use(
+	cors({
+		origin: "http://localhost:3000", // VOTRE PORT EXACT DU FRONTEND
+		methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+		credentials: true,
+	}),
+);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(cookieParser());
 
 // --- Montage des Routes MVC ---
 app.use("/api/users", userRoutes);

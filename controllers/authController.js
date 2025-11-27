@@ -142,12 +142,16 @@ export const login = async (req, res) => {
             const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, {
                 expiresIn: "1h",
             });
-    
+            res.cookie("authToken", token, {
+													httpOnly: true,
+													secure: false, 
+													sameSite: "lax",
+													maxAge: 3600000,
+												});
             res
                 .status(200)
                 .json({
                     message: "Connexion réussie !",
-                    token,
                     userId: user.id,
                     userFirstName: user.firstname || null,
                 });
@@ -258,4 +262,35 @@ export const forgotPassword = async (req, res) => {const { email } = req.body;
                 .status(500)
                 .send("Erreur serveur lors de la réinitialisation du mot de passe.");
         }
+    }
+
+    export const getMe = async (req, res) => {
+        try {
+          const token = req.cookies.authToken;
+          if (!token) return res.status(401).json({ message: "Non authentifié" });
+      
+          // On utilise le même secret pour vérifier
+          const decoded = jwt.verify(token, JWT_SECRET); 
+          
+          // Si on arrive ici, le token est valide !
+          // decoded.id contient l'ID de l'utilisateur
+
+          const users = await readUsers();
+          const user = users.find((u) => u.id === decoded.id);
+          if (!user) return res.status(404).json({ message: "Utilisateur non trouvé" });
+            res.json({ id: user.id, firstname: user.firstname || null });
+
+        } catch (error) {
+          console.error("Erreur lors de la récupération de l'utilisateur :", error);
+          res.status(500).json({ message: "Erreur serveur." });
+        }
+    }
+
+    export const logout = (req, res) => {    
+        res.clearCookie("authToken", {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "Lax",
+        });
+        res.status(200).json({ message: "Déconnexion réussie." });
     }
