@@ -16,7 +16,10 @@
     "timerequired": "01:00",
     "subscription": "Pro",
     "photoUrl": "/images/profile-pic-1763464838018.png",
-    "favoriteExercices": [],
+    "favoriteExercices": [
+      "LMGXZn8",
+      "27NNGFr"
+    ],
     "planning": [],
     "totalExercisesCompleted": 4,
     "unlockedBadges": [

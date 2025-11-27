@@ -298,7 +298,7 @@ export const forgotPassword = async (req, res) => {const { email } = req.body;
     export const logout = (req, res) => {    
         res.clearCookie("authToken", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
+            secure: false, 
             sameSite: "Lax",
         });
         res.status(200).json({ message: "Déconnexion réussie." });
