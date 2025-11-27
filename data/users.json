@@ -1,253 +1,274 @@
 [
-	{
-		"id": 1,
-		"email": "fourdin.pfmg@gmail.com",
-		"password": "$2b$10$L3LBzArTpb97ZOql5A5DHupQhxRCzo0xan3nEnquTWI.VwvrELVaG",
-		"name": "Fourdin",
-		"firstname": "Pierre",
-		"Address": "113 rue jean jaurès",
-		"zipcode": "59590",
-		"city": "Raismes",
-		"usertype": "Personnel",
-		"phone": "0320459530",
-		"address": "113 rue jean jaurès",
-		"diet": "Pescétarisme",
-		"levelexperiency": "Debutant",
-		"timerequired": "01:00",
-		"subscription": "Pro",
-		"photoUrl": "/images/profile-pic-1763464838018.png",
-		"favoriteExercices": ["27NNGFr", "f9lVSSI", "a4F9Oyc"],
-		"planning": [
-			{
-				"id": 1,
-				"title": "Séance JavaScript",
-				"start": "2025-11-24T10:00:00",
-				"end": "2025-11-24T11:00:00"
-			}
-		],
-		"totalExercisesCompleted": 2,
-		"unlockedBadges": ["prog_pas"],
-		"exercisesTried": {
-			"trmte8s": true,
-			"a4F9Oyc": true
-		},
-		"exercisesCounts": {
-			"trmte8s": 1,
-			"a4F9Oyc": 1
-		},
-		"consecutiveDays": 2,
-		"lastWorkoutDate": "2025-11-24T23:00:00.000Z",
-		"totalLateWorkouts": 1,
-		"timeAchieved": 2,
-		"exercisesTriedCount": 2,
-		"maxExerciseCount": 1
-	},
-	{
-		"id": 2,
-		"email": "fourdin.pfmg+1@gmail.com",
-		"password": "$2b$10$sDAjVMDMuuLfSpHE3RwNTesGjCAlRTKO/RytCMWSISesxZ1rgNeG6"
-	},
-	{
-		"id": 3,
-		"email": "john.doe@gmail.com",
-		"password": "$2b$10$67eh/.JZ6h383FU7EsMVAeaGjvCvb9iO50C8rJ5fkpglvJIfO4BxG"
-	},
-	{
-		"id": 4,
-		"email": "joachim.masson.17@gmail.com",
-		"password": "$2a$10$0Dh0gm44/zNX0KW9hoTy9uEbKe3w8P/Mxnt8WdeuWyO0dBz12Bg1e",
-		"name": "M",
-		"firstname": "Jo",
-		"phone": "0605040302",
-		"usertype": "Professionnel",
-		"levelexperiency": "Debutant",
-		"address": "",
-		"city": "",
-		"zipcode": "",
-		"favoriteExercices": ["LMGXZn8", "oLrKqDH", "wnEscH8", "1jXLYEw"],
-		"photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
-		"totalExercisesCompleted": 35,
-		"favoriteCoach": ["1"],
-		"unlockedBadges": ["prog_pas"],
-		"exercisesTried": {
-			"trmte8s": true
-		},
-		"exercisesCounts": {
-			"trmte8s": 1
-		},
-		"consecutiveDays": 1,
-		"lastWorkoutDate": "2025-11-24T16:24:49.819Z",
-		"exercisesTriedCount": 1,
-		"maxExerciseCount": 1
-	},
-	{
-		"id": 6,
-		"name": "michu",
-		"firstname": "mireille",
-		"address": "12 rue de la tasse",
-		"zipcode": "59200",
-		"city": "tourcoing",
-		"phone": "0102030405",
-		"email": "michu.mireille@gmail.com",
-		"password": "$2b$10$oXJjBOqjpeizoeG8ro3RSe5l/1dI41UCNr0KkAJ8F7K.cJaM/xDFe",
-		"usertype": "Professionnel",
-		"levelexperiency": "Intermédiaire",
-		"timerequired": "01:00",
-		"diet": "Sans restriction",
-		"subscription": "Pro"
-	},
-	{
-		"id": 7,
-		"name": "Pardo",
-		"firstname": "Cécile",
-		"address": "1 Rue du Ha",
-		"zipcode": "33000",
-		"city": "Bordeaux",
-		"phone": "0666666666",
-		"email": "pardo.cle@gmail.com",
-		"password": "$2b$10$jp7d4tnBeudLwG5sUhFSzOH5SW/QheTRzPh8oA99QV92ANPvx0uk2",
-		"usertype": "Personnel",
-		"subscription": "Pro",
-		"diet": "Végétarien",
-		"levelexperiency": "Expert",
-		"photoUrl": "/images/DSC_1373-1763564336005.jpg",
-		"totalExercisesCompleted": 1,
-		"unlockedBadges": ["prog_pas"],
-		"exercisesTried": {
-			"27NNGFr": true
-		},
-		"exercisesCounts": {
-			"27NNGFr": 1
-		},
-		"consecutiveDays": 1,
-		"lastWorkoutDate": "2025-11-24T17:25:57.213Z",
-		"timeAchieved": 1,
-		"exercisesTriedCount": 1,
-		"maxExerciseCount": 1,
-		"favoriteExercices": []
-	},
-	{
-		"name": "DEBAS",
-		"firstname": "Romain",
-		"address": "22 rue Bonjour",
-		"zipcode": "77200",
-		"city": "Torcy",
-		"phone": "0678912345",
-		"email": "romain@romain.com",
-		"password": "$2b$10$I2hQsczQqKFV4t/lTrgWk.vmgl2BFfQXMhN1qPoA/UVMKEfX2THsW",
-		"usertype": "Personnel",
-		"subscription": "Pro",
-		"levelexperiency": "Intermédiaire",
-		"timerequired": "05:00",
-		"diet": "Végétarien",
-		"photoUrl": "/images/IMG_4314-1763564525601.jpeg",
-		"totalExercisesCompleted": 154,
-		"unlockedBadges": [
-			"prog_pas",
-			"prog_assidu",
-			"spec_touche",
-			"spec_10min",
-			"prog_heros"
-		],
-		"exercisesTried": {
-			"a4F9Oyc": true,
-			"trmte8s": true,
-			"x6KpKpq": true,
-			"1jXLYEw": true,
-			"27NNGFr": true,
-			"LMGXZn8": true,
-			"f9lVSSI": true
-		},
-		"exercisesCounts": {
-			"a4F9Oyc": 3,
-			"trmte8s": 42,
-			"x6KpKpq": 2,
-			"1jXLYEw": 2,
-			"27NNGFr": 1,
-			"LMGXZn8": 6,
-			"f9lVSSI": 1
-		},
-		"consecutiveDays": 2,
-		"lastWorkoutDate": "2025-11-24T23:00:00.000Z",
-		"exercisesTriedCount": 7,
-		"maxExerciseCount": 42,
-		"favoriteExercices": ["trmte8s"],
-		"id": 8,
-		"totalEarlyWorkouts": 0,
-		"totalLateWorkouts": 0,
-		"timeAchieved": 68
-	},
-	{
-		"id": 9,
-		"name": "Harmajabb",
-		"firstname": "Leah",
-		"address": "12 Rue Cavallotti",
-		"zipcode": "75018",
-		"city": "Paris",
-		"phone": "0666666666",
-		"email": "harmajabbmoveUp@gmail.com",
-		"password": "$2b$10$4TJmpxFva6Yj7PODKtJYH.vOSY.ESVppt.aCvO8KITcNpjEKXdDEi",
-		"usertype": "Personnel",
-		"subscription": "Premium",
-		"photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
-		"levelexperiency": "Debutant",
-		"timerequired": "00:01",
-		"diet": "Clean Eating",
-		"favoriteExercices": ["LMGXZn8", "a4F9Oyc", "CcWEoWV"],
-		"totalExercisesCompleted": 1
-	},
-	{
-		"id": 10,
-		"name": "DUMOTIER",
-		"firstname": "Aurélie",
-		"address": "41 Avenue de Verdun",
-		"zipcode": "78290",
-		"city": "Croissy-sur-Seine",
-		"phone": "0683144424",
-		"email": "aurelie.dumotier@gmail.com",
-		"password": "$2b$10$r47AGFlcLQi0OPmTcBbcnuImTixI0d4CHg5qWOfcU38A8rMHSPw4.",
-		"usertype": "Personnel",
-		"subscription": "Pro",
-		"totalExercisesCompleted": "1111111111",
-		"levelexperiency": "Intermédiaire",
-		"timerequired": "01:00",
-		"diet": "Sans restriction",
-		"photoUrl": "/images/Photo AurÃ©lie 2024 B-1763656157188.jpg",
-		"favoriteExercices": ["LMGXZn8"]
-	},
-	{
-		"id": 11,
-		"name": "Lecourbe",
-		"firstname": "Camille",
-		"address": "5 Rue Péligot",
-		"zipcode": "95880",
-		"city": "Enghien-les-Bains",
-		"phone": "0666666666",
-		"email": "CamillemoveUp@gmail.com",
-		"password": "$2b$10$Ey2uVNyRCGX3PAfEYkMgLOVNAd0/Hv4M59sCqDz.6k9sOmi4XZGgO",
-		"usertype": "Personnel",
-		"subscription": "Pro",
-		"levelexperiency": "Intermédiaire",
-		"timerequired": "03:00",
-		"diet": "Sans restriction",
-		"photoUrl": "/images/troy-community-1763723633180.gif",
-		"totalExercisesCompleted": 4,
-		"favoriteExercices": ["LMGXZn8", "a4F9Oyc", "f9lVSSI", "oLrKqDH"],
-		"planning": [
-			{
-				"exerciseId": "ye84CTU",
-				"title": "Curl au pupitre à la machine",
-				"start": "2025-11-26T06:00:00.000Z",
-				"end": "2025-11-26T11:00:00.000Z",
-				"id": "49fab639-2e23-4db3-aa4e-3390374a3606"
-			},
-			{
-				"exerciseId": "8d8qJQI",
-				"title": "Row incliné à la barre prise inversée",
-				"start": "2025-11-27T07:00:00.000Z",
-				"end": "2025-11-27T13:30:00.000Z",
-				"id": "801e5f88-ad2b-4b1c-b746-35c7b81566b8"
-			}
-		]
-	}
+  {
+    "id": 1,
+    "email": "fourdin.pfmg@gmail.com",
+    "password": "$2b$10$1NZ96GFWsykulepRl5LHLuLDDBUZtjG/Y/iVEh00HZA0mTIbmyV7K",
+    "name": "Fourdin",
+    "firstname": "Pierre",
+    "Address": "113 rue jean jaurès",
+    "zipcode": "59590",
+    "city": "Raismes",
+    "usertype": "Personnel",
+    "phone": "0320459530",
+    "address": "113 rue jean jaurès",
+    "diet": "Pescétarisme",
+    "levelexperiency": "Debutant",
+    "timerequired": "01:00",
+    "subscription": "Pro",
+    "photoUrl": "/images/profile-pic-1763464838018.png",
+    "favoriteExercices": [],
+    "planning": [],
+    "totalExercisesCompleted": 4,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true,
+      "a4F9Oyc": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 1,
+      "a4F9Oyc": 3
+    },
+    "consecutiveDays": 3,
+    "lastWorkoutDate": "2025-11-25T23:00:00.000Z",
+    "totalLateWorkouts": 1,
+    "timeAchieved": 4,
+    "exercisesTriedCount": 2,
+    "maxExerciseCount": 3
+  },
+  {
+    "id": 2,
+    "email": "fourdin.pfmg+1@gmail.com",
+    "password": "$2b$10$sDAjVMDMuuLfSpHE3RwNTesGjCAlRTKO/RytCMWSISesxZ1rgNeG6"
+  },
+  {
+    "id": 3,
+    "email": "john.doe@gmail.com",
+    "password": "$2b$10$67eh/.JZ6h383FU7EsMVAeaGjvCvb9iO50C8rJ5fkpglvJIfO4BxG"
+  },
+  {
+    "id": 4,
+    "email": "joachim.masson.17@gmail.com",
+    "password": "$2a$10$0Dh0gm44/zNX0KW9hoTy9uEbKe3w8P/Mxnt8WdeuWyO0dBz12Bg1e",
+    "name": "M",
+    "firstname": "Jo",
+    "phone": "0605040302",
+    "usertype": "Professionnel",
+    "levelexperiency": "Debutant",
+    "address": "",
+    "city": "",
+    "zipcode": "",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "oLrKqDH",
+      "wnEscH8",
+      "1jXLYEw"
+    ],
+    "photoUrl": "/images/toonmecom_a00db7-1763548199592.jpeg",
+    "totalExercisesCompleted": 37,
+    "favoriteCoach": [
+      "1"
+    ],
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "trmte8s": true,
+      "wnEscH8": true
+    },
+    "exercisesCounts": {
+      "trmte8s": 2,
+      "wnEscH8": 1
+    },
+    "consecutiveDays": 3,
+    "lastWorkoutDate": "2025-11-25T23:00:00.000Z",
+    "exercisesTriedCount": 2,
+    "maxExerciseCount": 2
+  },
+  {
+    "id": 6,
+    "name": "michu",
+    "firstname": "mireille",
+    "address": "12 rue de la tasse",
+    "zipcode": "59200",
+    "city": "tourcoing",
+    "phone": "0102030405",
+    "email": "michu.mireille@gmail.com",
+    "password": "$2b$10$oXJjBOqjpeizoeG8ro3RSe5l/1dI41UCNr0KkAJ8F7K.cJaM/xDFe",
+    "usertype": "Professionnel",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "01:00",
+    "diet": "Sans restriction",
+    "subscription": "Pro"
+  },
+  {
+    "id": 7,
+    "name": "Pardo",
+    "firstname": "Cécile",
+    "address": "1 Rue du Ha",
+    "zipcode": "33000",
+    "city": "Bordeaux",
+    "phone": "0666666666",
+    "email": "pardo.cle@gmail.com",
+    "password": "$2b$10$jp7d4tnBeudLwG5sUhFSzOH5SW/QheTRzPh8oA99QV92ANPvx0uk2",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "diet": "Végétarien",
+    "levelexperiency": "Expert",
+    "photoUrl": "/images/DSC_1373-1763564336005.jpg",
+    "totalExercisesCompleted": 1,
+    "unlockedBadges": [
+      "prog_pas"
+    ],
+    "exercisesTried": {
+      "27NNGFr": true
+    },
+    "exercisesCounts": {
+      "27NNGFr": 1
+    },
+    "consecutiveDays": 1,
+    "lastWorkoutDate": "2025-11-24T17:25:57.213Z",
+    "timeAchieved": 1,
+    "exercisesTriedCount": 1,
+    "maxExerciseCount": 1,
+    "favoriteExercices": []
+  },
+  {
+    "name": "DEBAS",
+    "firstname": "Romain",
+    "address": "22 rue Bonjour",
+    "zipcode": "77200",
+    "city": "Torcy",
+    "phone": "0678912345",
+    "email": "romain@romain.com",
+    "password": "$2b$10$I2hQsczQqKFV4t/lTrgWk.vmgl2BFfQXMhN1qPoA/UVMKEfX2THsW",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "05:00",
+    "diet": "Végétarien",
+    "photoUrl": "/images/IMG_4314-1763564525601.jpeg",
+    "totalExercisesCompleted": 154,
+    "unlockedBadges": [
+      "prog_pas",
+      "prog_assidu",
+      "spec_touche",
+      "spec_10min",
+      "prog_heros"
+    ],
+    "exercisesTried": {
+      "a4F9Oyc": true,
+      "trmte8s": true,
+      "x6KpKpq": true,
+      "1jXLYEw": true,
+      "27NNGFr": true,
+      "LMGXZn8": true,
+      "f9lVSSI": true
+    },
+    "exercisesCounts": {
+      "a4F9Oyc": 3,
+      "trmte8s": 42,
+      "x6KpKpq": 2,
+      "1jXLYEw": 2,
+      "27NNGFr": 1,
+      "LMGXZn8": 6,
+      "f9lVSSI": 1
+    },
+    "consecutiveDays": 2,
+    "lastWorkoutDate": "2025-11-24T23:00:00.000Z",
+    "exercisesTriedCount": 7,
+    "maxExerciseCount": 42,
+    "favoriteExercices": [
+      "trmte8s"
+    ],
+    "id": 8,
+    "totalEarlyWorkouts": 0,
+    "totalLateWorkouts": 0,
+    "timeAchieved": 68
+  },
+  {
+    "id": 9,
+    "name": "Harmajabb",
+    "firstname": "Leah",
+    "address": "12 Rue Cavallotti",
+    "zipcode": "75018",
+    "city": "Paris",
+    "phone": "0666666666",
+    "email": "harmajabbmoveUp@gmail.com",
+    "password": "$2b$10$4TJmpxFva6Yj7PODKtJYH.vOSY.ESVppt.aCvO8KITcNpjEKXdDEi",
+    "usertype": "Personnel",
+    "subscription": "Premium",
+    "photoUrl": "/images/276595f5e7b74bf5d4e5219164d8567b-1763564097147.jpg",
+    "levelexperiency": "Debutant",
+    "timerequired": "00:01",
+    "diet": "Clean Eating",
+    "favoriteExercices": [
+      "LMGXZn8",
+      "a4F9Oyc",
+      "CcWEoWV"
+    ],
+    "totalExercisesCompleted": 1
+  },
+  {
+    "id": 10,
+    "name": "DUMOTIER",
+    "firstname": "Aurélie",
+    "address": "41 Avenue de Verdun",
+    "zipcode": "78290",
+    "city": "Croissy-sur-Seine",
+    "phone": "0683144424",
+    "email": "aurelie.dumotier@gmail.com",
+    "password": "$2b$10$r47AGFlcLQi0OPmTcBbcnuImTixI0d4CHg5qWOfcU38A8rMHSPw4.",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "totalExercisesCompleted": "1111111111",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "01:00",
+    "diet": "Sans restriction",
+    "photoUrl": "/images/Photo AurÃ©lie 2024 B-1763656157188.jpg",
+    "favoriteExercices": [
+      "LMGXZn8"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Lecourbe",
+    "firstname": "Camille",
+    "address": "5 Rue Péligot",
+    "zipcode": "95880",
+    "city": "Enghien-les-Bains",
+    "phone": "0666666666",
+    "email": "CamillemoveUp@gmail.com",
+    "password": "$2b$10$Ey2uVNyRCGX3PAfEYkMgLOVNAd0/Hv4M59sCqDz.6k9sOmi4XZGgO",
+    "usertype": "Personnel",
+    "subscription": "Pro",
+    "levelexperiency": "Intermédiaire",
+    "timerequired": "03:00",
+    "diet": "Sans restriction",
+    "photoUrl": "/images/troy-community-1763723633180.gif",
+    "totalExercisesCompleted": 4,
+    "favoriteExercices": [
+      "LMGXZn8",
+      "a4F9Oyc",
+      "f9lVSSI",
+      "oLrKqDH"
+    ],
+    "planning": [
+      {
+        "exerciseId": "ye84CTU",
+        "title": "Curl au pupitre à la machine",
+        "start": "2025-11-26T06:00:00.000Z",
+        "end": "2025-11-26T11:00:00.000Z",
+        "id": "49fab639-2e23-4db3-aa4e-3390374a3606"
+      },
+      {
+        "exerciseId": "8d8qJQI",
+        "title": "Row incliné à la barre prise inversée",
+        "start": "2025-11-27T07:00:00.000Z",
+        "end": "2025-11-27T13:30:00.000Z",
+        "id": "801e5f88-ad2b-4b1c-b746-35c7b81566b8"
+      }
+    ]
+  }
 ]
