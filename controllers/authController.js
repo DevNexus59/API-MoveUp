@@ -196,7 +196,12 @@ export const googleLogin = async (req, res) => {const { credential } = req.body;
             JWT_SECRET,
             { expiresIn: "1h" },
         );
-
+        res.cookie("authToken", notreToken, {
+									httpOnly: true,
+									secure: false, //
+									sameSite: "lax",
+									maxAge: 3600000,
+								});
         res.json({ token: notreToken
             , userId: user.id
             , userFirstName: user.firstname || null
@@ -278,7 +283,11 @@ export const forgotPassword = async (req, res) => {const { email } = req.body;
           const users = await readUsers();
           const user = users.find((u) => u.id === decoded.id);
           if (!user) return res.status(404).json({ message: "Utilisateur non trouvé" });
-            res.json({ id: user.id, firstname: user.firstname || null });
+          res.json({
+					favoriteExercices: user.favoriteExercices,
+					id: user.id,
+					firstname: user.firstname || null,
+					});
 
         } catch (error) {
           console.error("Erreur lors de la récupération de l'utilisateur :", error);
@@ -289,7 +298,7 @@ export const forgotPassword = async (req, res) => {const { email } = req.body;
     export const logout = (req, res) => {    
         res.clearCookie("authToken", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
+            secure: false, 
             sameSite: "Lax",
         });
         res.status(200).json({ message: "Déconnexion réussie." });

@@ -16,15 +16,11 @@
     "timerequired": "01:00",
     "subscription": "Pro",
     "photoUrl": "/images/profile-pic-1763464838018.png",
-    "favoriteExercices": [],
-    "planning": [
-      {
-        "id": 1,
-        "title": "Séance JavaScript",
-        "start": "2025-11-24T10:00:00",
-        "end": "2025-11-24T11:00:00"
-      }
+    "favoriteExercices": [
+      "LMGXZn8",
+      "27NNGFr"
     ],
+    "planning": [],
     "totalExercisesCompleted": 4,
     "unlockedBadges": [
       "prog_pas"
