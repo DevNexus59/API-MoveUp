@@ -16,12 +16,12 @@ import cookieParser from "cookie-parser";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const PORT = 4000;
+const PORT = 3000;
 
 // --- Middlewares ---
 app.use(
 	cors({
-		origin: "http://localhost:3000", // VOTRE PORT EXACT DU FRONTEND
+		origin: ["https://moveup.pierrefourdin.dev", "http://localhost:3000"], // VOTRE PORT EXACT DU FRONTEND
 		methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 		credentials: true,
 	}),
