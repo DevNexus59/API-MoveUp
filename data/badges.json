@@ -6,7 +6,7 @@
         "metric": "totalExercisesCompleted", 
         "requiredValue": 1,
         "type": "PROGRESSION",
-        "icon": "http://localhost:4000/images/iconesBadges/baby.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/baby.png"
     },
     {
         "id": "prog_assidu",
@@ -14,7 +14,7 @@
         "metric": "totalExercisesCompleted",
         "requiredValue": 50,
         "type": "PROGRESSION",
-        "icon": "http://localhost:4000/images/iconesBadges/clock.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/clock.png"
     },
     {
         "id": "prog_heros",
@@ -22,7 +22,7 @@
         "metric": "totalExercisesCompleted",
         "requiredValue": 100,
         "type": "PROGRESSION",
-        "icon": "http://localhost:4000/images/iconesBadges/biceps.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/biceps.png"
     },
     {
         "id": "reg_sem_parf",
@@ -30,7 +30,7 @@
         "metric": "consecutiveDays",
         "requiredValue": 7,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/week.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/week.png"
     },
     {
         "id": "reg_mois_parf",
@@ -38,7 +38,7 @@
         "metric": "consecutiveDays",
         "requiredValue": 30,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/month.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/month.png"
     },
     {
         "id": "reg_leve_tot",
@@ -46,7 +46,7 @@
         "metric": "totalEarlyWorkouts",
         "requiredValue": 10,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/day.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/day.png"
     },
     {
         "id": "reg_noctambule",
@@ -54,7 +54,7 @@
         "metric": "totalLateWorkouts",
         "requiredValue": 10,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/night.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/night.png"
     },
     {
         "id": "spec_touche",
@@ -62,7 +62,7 @@
         "metric": "exercisesTriedCount",
         "requiredValue": 5,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/discover.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/discover.png"
     },
     {
         "id": "spec_explor",
@@ -70,7 +70,7 @@
         "metric": "exercisesTriedCount",
         "requiredValue": 10,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/binoculars.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/binoculars.png"
     },
     {
         "id": "spec_spec",
@@ -78,7 +78,7 @@
         "metric": "maxExerciseCount",
         "requiredValue": 50,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/weights.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/weights.png"
     },
     {
         "id": "spec_10min",
@@ -86,7 +86,7 @@
         "metric": "timeAchieved",
         "requiredValue": 600,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/10min.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/10min.png"
     },
     {
         "id": "spec_2heures",
@@ -94,6 +94,6 @@
         "metric": "timeAchieved",
         "requiredValue": 7200,
         "type": "LOGIC",
-        "icon": "http://localhost:4000/images/iconesBadges/2h.png"
+        "icon": "https://moveup.pierrefourdin.dev:3000/images/iconesBadges/2h.png"
     }
 ]
